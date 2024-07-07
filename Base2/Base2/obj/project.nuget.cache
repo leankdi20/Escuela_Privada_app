@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U4mAb29+bwQ=",
+  "dgSpecHash": "bXp/L6kCvqs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2\\Base2.csproj",
+  "projectFilePath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leanv\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

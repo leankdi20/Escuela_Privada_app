@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Login"
+               Title="Login"
+                BackgroundColor="#365359">
+    <StackLayout>
+
+        <StackLayout Padding="20">
+
+            <!-- Imagen de la escuela -->
+            <StackLayout Margin="0,0,0,0">
+                <Image Source="escuelaPrivada.png" 
+              Aspect="AspectFill" 
+              HorizontalOptions="CenterAndExpand" 
+              VerticalOptions="CenterAndExpand" 
+              HeightRequest="200" 
+              WidthRequest="200"/>
+            </StackLayout>
+            
+            
+            <Label Text="Login" x:Name="lblogin" FontSize="40" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" 
+                   Margin="0,0,0,0" Padding="20" FontFamily="" TextColor="White"  />
+            <!-- Frame con esquinas redondeadas -->
+            <Frame CornerRadius="70" HeightRequest="160" Padding="0" HasShadow="True" Margin="-90,0,20,0" BackgroundColor="#3c575d">
+                <Grid Padding="8">
+ 
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1"/>
+                        <!-- Espacio para la línea divisoria -->
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <!-- Espacio para el botón -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Entry para ingresar texto -->
+                    <Entry Grid.Column="0" Grid.Row="0" Placeholder="Email" TextColor="White" PlaceholderColor="White"
+                        BackgroundColor="Transparent" Margin="80,0,10,25" HorizontalOptions="FillAndExpand" x:Name="txtUser"
+                           Keyboard="Email"/>
+
+                    <!-- BoxView como línea divisoria -->
+                    <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" 
+                          Margin="0,0,60,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
+
+                    <!-- Segundo Entry -->
+                    <Entry Grid.Column="0" Grid.Row="2" Placeholder=" Password"  TextColor="White" PlaceholderColor="White"
+                        BackgroundColor="Transparent" Margin="80,10,10,0"
+                        HorizontalOptions="FillAndExpand" x:Name="txtPass" IsPassword="True"/>
+
+                    <!-- ImageButton colocado al lado del Frame -->
+                    <ImageButton Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Source="login.png" WidthRequest="60" HeightRequest="60" 
+                              BackgroundColor="Transparent" VerticalOptions="Center"
+                              Margin="40,10,0,0" x:Name="btnLogin"/>
+                </Grid>
+            </Frame>
+            <Label Text="¿Olvidaste tu contraseña?" x:Name="lbolvidaste" FontSize="15" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                   Margin="0,-10,0,0" Padding="20" FontFamily="" TextColor="Gray"  />
+
+
+
+            <Button Text="Registrar" CornerRadius="30" Margin="-60,0,230,0" x:Name="btnRegistrar" BackgroundColor="#edcd91"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

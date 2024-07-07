@@ -13,3 +13,22 @@ C:\Users\leanv\source\repos\Base2\Base2\Base2\obj\Debug\netstandard2.0\XamlC.sta
 C:\Users\leanv\source\repos\Base2\Base2\Base2\obj\Debug\netstandard2.0\Base2.dll
 C:\Users\leanv\source\repos\Base2\Base2\Base2\obj\Debug\netstandard2.0\refint\Base2.dll
 C:\Users\leanv\source\repos\Base2\Base2\Base2\obj\Debug\netstandard2.0\Base2.pdb
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\bin\Debug\netstandard2.0\Base2.deps.json
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\bin\Debug\netstandard2.0\Base2.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\bin\Debug\netstandard2.0\ref\Base2.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\bin\Debug\netstandard2.0\Base2.pdb
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.csproj.AssemblyReference.cache
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.AssemblyInfoInputs.cache
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.AssemblyInfo.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.csproj.CoreCompileInputs.cache
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.sourcelink.json
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\refint\Base2.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.pdb
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\Login.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\MenuPrincipal.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\Register.xaml.g.cs

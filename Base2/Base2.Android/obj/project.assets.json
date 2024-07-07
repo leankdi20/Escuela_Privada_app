@@ -4268,11 +4268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.Android\\Base2.Android.csproj",
+      "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
       "projectName": "Base2.Android",
-      "projectPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.Android\\Base2.Android.csproj",
+      "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
       "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.Android\\obj\\",
+      "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4293,8 +4293,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2\\Base2.csproj": {
-              "projectPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2\\Base2.csproj"
+            "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
+              "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
             }
           }
         }

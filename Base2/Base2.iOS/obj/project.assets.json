@@ -1255,11 +1255,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.iOS\\Base2.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
       "projectName": "Base2.iOS",
-      "projectPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.iOS\\Base2.iOS.csproj",
+      "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
       "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.iOS\\obj\\",
+      "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1280,8 +1280,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2\\Base2.csproj": {
-              "projectPath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2\\Base2.csproj"
+            "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
+              "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vYhf0qlImmA=",
+  "dgSpecHash": "Q6AZeFdyJkA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\leanv\\source\\repos\\Base2\\Base2\\Base2.iOS\\Base2.iOS.csproj",
+  "projectFilePath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leanv\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\xamarin.essentials\\1.8.1\\xamarin.essentials.1.8.1.nupkg.sha512",
