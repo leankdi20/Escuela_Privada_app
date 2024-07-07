@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.MainPage">
+    <StackLayout>
+
+        <Label Text="Leandro Emanuel Varela " FontSize="Medium" Padding="20,10,20,10" x:Name="lbl03"/>
+
+        <Label Text="Curso Ulacit Lenguaje C#" FontSize="Large" Padding="30,10,30,10" x:Name="lbl01"/>
+        <Label Text="Valores" FontSize="Large" Padding="30,10,30,10" x:Name="valores"/>
+        
+        <Entry Placeholder="Nombre" FontFamily="Arial" FontSize="Medium" x:Name="txt_01"/>
+
+
+        <DatePicker MinimumDate="2024-01-01" MaximumDate="2024-12-31" x:Name="dp"/>
+
+        <Label Text="Cafe"/>
+        <RadioButton x:Name="rbCafe" />
+        
+        <Label Text="Chocolate"/>
+        <RadioButton x:Name="rbChocolate" />
+        
+        <Label Text="Agua"/>
+        <RadioButton x:Name="rbAg" />
+
+        <Slider Minimum="0" Maximum="100"  Value="5" x:Name="SValor"/>
+        
+
+        <Button Text="OK" BackgroundColor="Blue" TextColor="White" x:Name="btn_ok"/>
+    </StackLayout>
+
+</ContentPage>
