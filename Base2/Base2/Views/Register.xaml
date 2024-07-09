@@ -25,9 +25,9 @@
 
             <StackLayout Padding="20">
                 <Label Text="Register" x:Name="lblogin" FontSize="40" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
-                   Margin="0,0,0,-60" Padding="20" FontFamily="" TextColor="White"  />
+                   Margin="0,-40,0,0" Padding="20" TextColor="White"  FontFamily="{StaticResource BaskervvilleSC-Regular}" />
                 <!-- Frame con esquinas redondeadas -->
-                <Frame CornerRadius="70" HeightRequest="300" Padding="0" HasShadow="True" Margin="-90,40,0,0" BackgroundColor="#3c575d">
+                <Frame CornerRadius="70" HeightRequest="300" Padding="0" HasShadow="True" Margin="-90,0,0,0" BackgroundColor="#3c575d">
                     <Grid Padding="8">
 
                         <Grid.RowDefinitions>
@@ -74,9 +74,9 @@
                                 HorizontalOptions="FillAndExpand" x:Name="txtPassword" IsPassword="True"/>
 
                         <!-- ImageButton colocado al lado del Frame -->
-                        <ImageButton Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Source="registrarse.png" WidthRequest="60" HeightRequest="60" 
+                        <ImageButton Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Source="agregarU.png" WidthRequest="60" HeightRequest="60" 
                              BackgroundColor="Transparent" VerticalOptions="Center"
-                             Margin="0,60,0,0" x:Name="btnRegister"/>   
+                             Margin="0,70,0,0" x:Name="btnRegister"/>   
                     </Grid>
                 </Frame>
 
@@ -85,7 +85,8 @@
 
 
 
-                <Button Text="Login" CornerRadius="30" Margin="-60,0,230,0" x:Name="btnLogin" BackgroundColor="#edcd91" />
+                <Button Text="Login" CornerRadius="30" Margin="-60,-10,230,0" x:Name="btnLogin" BackgroundColor="#edcd91" 
+                         TextColor="#365359"/>
             </StackLayout>
         </StackLayout>
 

@@ -17,11 +17,10 @@
               HeightRequest="200" 
               WidthRequest="200"/>
             </StackLayout>
-            
-            
+
+
             <Label Text="Login" x:Name="lblogin" FontSize="40" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" 
-                   Margin="0,0,0,0" Padding="20" FontFamily="" TextColor="White"  />
-            <!-- Frame con esquinas redondeadas -->
+                   Margin="0,-20,0,0" Padding="20" TextColor="White" FontFamily="{StaticResource BaskervvilleSC-Regular}" />
             <Frame CornerRadius="70" HeightRequest="160" Padding="0" HasShadow="True" Margin="-90,0,20,0" BackgroundColor="#3c575d">
                 <Grid Padding="8">
  
@@ -63,7 +62,7 @@
 
 
 
-            <Button Text="Registrar" CornerRadius="30" Margin="-60,0,230,0" x:Name="btnRegistrar" BackgroundColor="#edcd91"/>
+            <Button Text="Registrar" CornerRadius="30" Margin="-60,-20,230,0" x:Name="btnRegistrar" BackgroundColor="#edcd91" TextColor="#365359"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

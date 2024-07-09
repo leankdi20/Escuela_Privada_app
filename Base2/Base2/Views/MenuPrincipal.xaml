@@ -1,13 +1,148 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Base2.MenuPrincipal">
+             x:Class="Base2.MenuPrincipal"
+             Title="Menu Principal">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-        </StackLayout>
+        <Grid >
+            <!-- Definición de filas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Encabezado -->
+                <RowDefinition Height="Auto"/>
+                <!-- Contenido -->
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="#365359" Padding="20" HeightRequest="100">
+                <Grid Margin="-10,20,0,0">
+                    <!-- Definición de columnas -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="escuelaPrivada.png" WidthRequest="60"  Margin="0,0,10,0"/>
+                    <!-- Label en la primera columna -->
+                    <Label Grid.Column="1" Text="Escuela Privada" FontSize="25" HorizontalOptions="Start" 
+                       FontFamily="{StaticResource BaskervvilleSC-Regular}" VerticalOptions="Center" TextColor="White" 
+                           Margin="0,0,0,10"/>
+
+                    <!-- ImageButton en la segunda columna -->
+                    <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
+                             HorizontalOptions="End" VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+
+
+            <!-- Contenido -->
+            <ScrollView Grid.Row="1" HeightRequest="500" >
+
+                <StackLayout Margin="0,0,0,0">
+                    <Grid BackgroundColor="#365359" HeightRequest="600"  >
+
+                        <Grid Padding="10" Margin="0,40,0,0">
+                            <!-- Definición de filas -->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Primer Label -->
+                            <Label Grid.Row="0" FontSize="30" x:Name="lblname" FontFamily="{StaticResource BaskervvilleSC-Regular}" 
+                               TextColor="White" Text="Bienvenido"/>
+
+                            <!-- Segundo Label -->
+                            <Label Grid.Row="1" Text="¡Te damos la &#10;Bienvenida a Escuela Privada &#10;Tu Familia!" 
+                                       FontSize="25" TextColor="White" />
+
+                            <Label Grid.Row="2" Text="Novedades" FontSize="20" TextColor="White" Margin="0,10,0,40"  />
+                        </Grid>
+
+
+                        <!-- CarouselView -->
+                        <Grid  Padding="20">
+                            <CarouselView ItemsSource="{Binding CarouselItems}" Margin="0,220,0,0">
+                                <CarouselView.ItemTemplate  HeightRequest="150" WidthRequest="150">
+                                    <DataTemplate >
+                                        <Frame BackgroundColor="#365359" CornerRadius="20" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0" >
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="0">
+                                                <Image Source="{Binding ImageSource}" WidthRequest="450" HeightRequest="450" Margin="0,-50,0,0"  />
+
+                                            </StackLayout>
+                                        </Frame>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                        </Grid>
+
+                    </Grid>
+                    <!-- Texto en la parte superior -->
+                    <Label Text="Mis Estudiantes" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" 
+                               VerticalOptions="Start" Margin="20,30,0,0" HorizontalOptions="StartAndExpand"/>
+                    <!-- Botón personalizado -->
+                    <Frame BackgroundColor="White" CornerRadius="10" HeightRequest="120" WidthRequest="120" HasShadow="True"    
+                                   HorizontalOptions="Start" VerticalOptions="Center" Padding="15" Margin="40,0,0,0">
+
+                        <StackLayout>
+                            <!-- Imagen y texto centrados -->
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <ImageButton Source="agregar.png" WidthRequest="40" HeightRequest="40" x:Name="btnAdd" Margin="10" BackgroundColor="Transparent"/>
+                                <Label Text="Añadir estudiante" FontSize="Medium" TextColor="Black" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="White" CornerRadius="10" HeightRequest="120" WidthRequest="120" HasShadow="True"    
+                        HorizontalOptions="Start" VerticalOptions="Center" Padding="15" Margin="40,0,0,0">
+
+                        <StackLayout>
+                            <!-- Imagen y texto centrados -->
+                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                                <ImageButton Source="agregar.png" WidthRequest="40" HeightRequest="40" x:Name="btnAnuncio" Margin="10" BackgroundColor="Transparent"/>
+                                <Label Text="Añadir anuncio" FontSize="Medium" TextColor="Black" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+
+            <!-- Menú Inferior -->
+            <Grid Grid.Row="2" BackgroundColor="White" Padding="5" HeightRequest="55" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Botón Home -->
+                <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton Source="home.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" x:Name="btnHome" />
+                    <Label Text="Home" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <!-- Botón Estudiantes -->
+                <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton Source="Estudiante.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" x:Name="btnEstudiante"/>
+                    <Label Text="Estudiantes" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <!-- Botón Novedades -->
+                <StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton Source="novedades.png" WidthRequest="20" HeightRequest="20"  BackgroundColor="Transparent"  x:Name="btnNovedades"/>
+                    <Label Text="Novedades" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <!-- Botón Perfil -->
+                <StackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ImageButton Source="perfil.png" WidthRequest="20" HeightRequest="20"  BackgroundColor="Transparent" x:Name="btnPerfil"/>
+                    <Label Text="Perfil" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+       
     </ContentPage.Content>
 </ContentPage>

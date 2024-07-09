@@ -774,6 +774,16 @@ C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\mipmap-xxxhdpi\icon.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\agregar.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\login.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\registrarse.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\escuelaprivada.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\agregaru.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\notifi.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\estudiante.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\home.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\novedades.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\perfil.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\uploadflags.txt
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\resolvedassemblies.hash
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\Base2.Android.dll
@@ -1400,7 +1410,6 @@ C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\login.png
-C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\agregar.png
-C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\registrarse.png
-C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\escuelaprivada.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\escuela1.jpg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\escuela2.jpeg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\escuela3.jpeg

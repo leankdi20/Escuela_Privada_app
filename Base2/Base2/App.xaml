@@ -3,6 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Base2.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <OnPlatform x:Key="BaskervvilleSC-Regular" x:TypeArguments="x:String">
+                <On Platform="Android" Value="BaskervvilleSC-Regular.ttf#BaskervvilleSC-Regular"/>
+            </OnPlatform>
+            <OnPlatform x:Key="Bienvenido" x:TypeArguments="x:String">
+                <On Platform="Android" Value="Bienvenido.ttf#Bienvenido"/>
+            </OnPlatform>
+          
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

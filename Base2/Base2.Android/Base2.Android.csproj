@@ -64,6 +64,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="..\..\..\..\..\..\..\Downloads\Baskervville_SC\BaskervvilleSC-Regular.ttf">
+      <Link>Assets\BaskervvilleSC-Regular.ttf</Link>
+    </AndroidAsset>
+    <None Include="..\..\..\..\..\..\..\Downloads\Baskervville_SC,EB_Garamond\Baskervville_SC\Bienvenido.ttf">
+      <Link>Assets\Bienvenido.ttf</Link>
+    </None>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -101,6 +107,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\escuelaPrivada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\OFL.txt" />
+    <AndroidResource Include="Resources\drawable\agregarU.png" />
+    <AndroidResource Include="Resources\drawable\notifi.png" />
+    <AndroidResource Include="Resources\drawable\Estudiante.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\novedades.png" />
+    <AndroidResource Include="Resources\drawable\perfil.png" />
+    <AndroidResource Include="Resources\drawable\escuela1.jpg" />
+    <AndroidResource Include="Resources\drawable\escuela2.jpeg" />
+    <AndroidResource Include="Resources\drawable\escuela3.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

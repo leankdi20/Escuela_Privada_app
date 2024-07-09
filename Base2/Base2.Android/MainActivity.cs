@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 
+
 namespace Base2.Droid
 {
     [Activity(Label = "Base2", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]

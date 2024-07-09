@@ -12,11 +12,19 @@ namespace Base2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        private List<LogIn> log;
         public Login()
         {
             InitializeComponent();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
+
+            //defino login quemado de prueba
+
+            log = new List<LogIn>
+            {
+                new LogIn { Name = "Leandro", Email = "leandro@mail.com", Password = "L123" },
+            };
 
         }
 
@@ -27,22 +35,25 @@ namespace Base2
 
         private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            string User = txtUser.Text;
+            string email = txtUser.Text;
             string Pass = txtPass.Text;
+     
 
+            var user = log.FirstOrDefault(u => u.Email == email && u.Password == Pass);
 
-            if (Pass == "L123" && User == "Leandro@mail.com")
+            if (user != null)
             {
-                string Welcome = $"Bienvenido {User}";
+                string Welcome = $"Bienvenido {user.Name}";
                 await DisplayAlert(Welcome, "Login Success", "OK");
                 txtUser.Text = "";
-                txtPass.Text= "";
-                await Navigation.PushAsync(new MenuPrincipal());
+                txtPass.Text = "";
+                await Navigation.PushAsync(new MenuPrincipal(user.Name));
             }
             else
             {
-                DisplayAlert("Login", "Login Failed", "OK");
+                await DisplayAlert("Login", "Login Failed", "OK");
             }
+
         }
     }
 }
