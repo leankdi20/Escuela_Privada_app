@@ -24,6 +24,8 @@ namespace Base2
             log = new List<LogIn>
             {
                 new LogIn { Name = "Leandro", Email = "leandro@mail.com", Password = "L123" },
+                new LogIn { Name = "Yereth", Email = "yeretho@mail.com", Password = "G123" },
+                new LogIn { Name = "Gerald", Email = "gerald@mail.com", Password = "G123" },
             };
 
         }
@@ -47,7 +49,7 @@ namespace Base2
                 await DisplayAlert(Welcome, "Login Success", "OK");
                 txtUser.Text = "";
                 txtPass.Text = "";
-                await Navigation.PushAsync(new MenuPrincipal(user.Name));
+                await Navigation.PushAsync(new MenuPrincipal(user.Name, user.Email));
             }
             else
             {

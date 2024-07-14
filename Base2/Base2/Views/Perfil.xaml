@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Base2"
+             x:Class="Base2.Perfil"
+             Title="Perfil"
+             BackgroundColor="#f7f7f7">
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <!-- Encabezado -->
+                <RowDefinition Height="65" />
+               
+            </Grid.RowDefinitions>
+
+
+
+            <ScrollView>
+                <StackLayout Grid.Row="0">
+                    <!--Encabezado del perfil-->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="nombre"
+                          VerticalOptions="StartAndExpand"
+                          HorizontalOptions="Center"
+                          Margin="0,30,65,0"
+                          x:Name="lblName"
+                          FontSize="25"
+                          Grid.Row="0"
+                          TextColor="Black"
+                          />
+                        <Label Text="email"
+                          VerticalOptions="StartAndExpand"
+                          HorizontalOptions="Center"
+                          Margin="0,0,30,0"
+                          x:Name="lblEmail"
+                          FontSize="15"
+                          Grid.Row="1"
+                          />
+                    </Grid>
+                
+            
+                    <!--Frame Mi cuenta-->
+                    <Label Text="Mi cuenta" FontSize="20" Margin="25,0,0,5" />
+                    <Frame CornerRadius="20" HeightRequest="130" Padding="0" HasShadow="True" Margin="25,0,25,0" >
+                        <Grid Padding="8">
+
+                        
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <!-- Espacio para la línea divisoria -->
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                       
+
+                            <!-- Informacion Personal -->
+                            <Button  Grid.Row="0" Text="Informacion Personal" TextColor="Black" 
+                              BackgroundColor="Transparent" Margin="20,0,0,0"
+                               x:Name="btnInfoPersonal"   HorizontalOptions="Start" TextTransform="None"/>
+
+                            <!-- BoxView como línea divisoria -->
+                            <BoxView Grid.Row="1" HeightRequest="1" 
+                              Margin="20,0,20,0" Color="#f7f7f7" HorizontalOptions="FillAndExpand"/>
+
+                            <!--Notificaciones -->
+                            <Button  Grid.Row="2" Text="Notificaciones" TextColor="Black"
+                              BackgroundColor="Transparent" Margin="20,0,0,0"
+                               x:Name="btnNotificaciones" HorizontalOptions="Start" TextTransform="None"/> 
+                       
+                        </Grid>
+                    </Frame>
+                
+                    <!--Frame Ayuda y valoracion-->
+                    <Label Text="Ayuda y valoración" FontSize="20" Margin="25,15,0,5" />
+                    <Frame CornerRadius="20" HeightRequest="130" Padding="0" HasShadow="True" Margin="25,0,25,0" >
+                        <Grid Padding="8">
+
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <!-- Espacio para la línea divisoria -->
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+
+                            <!-- Informacion Personal -->
+                            <Button  Grid.Row="0" Text="Ayuda" TextColor="Black"
+                               BackgroundColor="Transparent" Margin="5,0,0,0"
+                                x:Name="btnAyuda"   HorizontalOptions="Start" TextTransform="None"/>
+
+                            <!-- BoxView como línea divisoria -->
+                            <BoxView Grid.Row="1" HeightRequest="1" 
+                                 Margin="20,0,20,0" Color="#f7f7f7" HorizontalOptions="FillAndExpand"/>
+
+                            <!--Notificaciones -->
+                            <Button  Grid.Row="2" Text="Ayudanos a mejorar" TextColor="Black"
+                               BackgroundColor="Transparent" Margin="20,0,0,0"
+                                x:Name="btnAyudaMejora" HorizontalOptions="Start" TextTransform="None" />
+
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Menú Inferior -->
+            <local:BottomMenu Grid.Row="1" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
