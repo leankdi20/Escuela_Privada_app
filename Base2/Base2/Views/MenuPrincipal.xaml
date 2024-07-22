@@ -26,9 +26,10 @@
                     <Image Grid.Column="0" Source="escuelaPrivada.png" WidthRequest="60"  Margin="0,0,10,0"/>
                     <!-- Label en la primera columna -->
                     <Label Grid.Column="1" Text="Escuela Privada" FontSize="25" HorizontalOptions="Start" 
-                       FontFamily="{StaticResource BaskervvilleSC-Regular}" VerticalOptions="Center" TextColor="White" 
+                      VerticalOptions="Center" TextColor="White" 
                            Margin="0,0,0,10"/>
 
+                    <Label x:Name="StatusMessage" FontSize="Medium"/>
                     <!-- ImageButton en la segunda columna -->
                     <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
                              HorizontalOptions="End" VerticalOptions="Center"/>
@@ -50,7 +51,7 @@
                             </Grid.RowDefinitions>
 
                             <!-- Primer Label -->
-                            <Label Grid.Row="0" FontSize="30" x:Name="lblname" FontFamily="{StaticResource BaskervvilleSC-Regular}" 
+                            <Label Grid.Row="0" FontSize="30" x:Name="lblname" 
                                TextColor="White" Text="Bienvenido"/>
 
                             <!-- Segundo Label -->

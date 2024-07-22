@@ -108,6 +108,29 @@
                         </Grid>
                     </Frame>
 
+                    <!--Frame Ayuda y valoracion-->
+                    <Label Text="Ayuda y valoración" FontSize="20" Margin="25,15,0,5" />
+                    <Frame CornerRadius="20" HeightRequest="70" Padding="0" HasShadow="True" Margin="25,0,25,0" >
+                        <Grid Padding="8">
+
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <!-- Espacio para la línea divisoria -->
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+
+                            <!-- Informacion Personal -->
+                            
+                            <Button  Grid.Row="2" Text="Cerrar Sesion" TextColor="Black"
+                                BackgroundColor="Transparent" Margin="20,-10,0,0"
+                                 x:Name="btnCerrar" HorizontalOptions="Start" TextTransform="None" />
+
+                        </Grid>
+                    </Frame>
+
                 </StackLayout>
             </ScrollView>
 

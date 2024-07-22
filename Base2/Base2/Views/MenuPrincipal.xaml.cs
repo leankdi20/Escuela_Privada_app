@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Base2.models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,10 +38,6 @@ namespace Base2
 
             btnAdd.Clicked += BtnAdd_Clicked;
             btnAnuncio.Clicked += BtnAnuncio_Clicked;
-
-
-         
-
 
         }
 

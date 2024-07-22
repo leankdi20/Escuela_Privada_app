@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.MostrarUsuarios">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="Lista de Usuarios" FontSize="Large" HorizontalOptions="Center" Margin="10"/>
+
+            <!-- Contenedor principal con scroll horizontal para encabezado y filas -->
+            <ScrollView Orientation="Horizontal">
+                <StackLayout>
+
+                    <!-- Encabezado de la tabla -->
+                    <Grid BackgroundColor="LightGray">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="ID" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Text="First Name" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Text="Last Name" FontAttributes="Bold"/>
+                        <Label Grid.Column="3" Text="Email" FontAttributes="Bold"/>
+                        <Label Grid.Column="4" Text="Password" FontAttributes="Bold"/>
+                        <Label Grid.Column="5" Text="Phone" FontAttributes="Bold"/>
+                        <Label Grid.Column="6" Text="Address" FontAttributes="Bold"/>
+                        <Label Grid.Column="7" Text="City" FontAttributes="Bold"/>
+                    </Grid>
+
+                    <!-- ListView para los datos -->
+                    <ListView x:Name="UserListView" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="100"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Column="0" Text="{Binding IdUser}" />
+                                        <Label Grid.Column="1" Text="{Binding FirstName}" />
+                                        <Label Grid.Column="2" Text="{Binding LastName}" />
+                                        <Label Grid.Column="3" Text="{Binding Email}" />
+                                        <Label Grid.Column="4" Text="{Binding Password}" />
+                                        <Label Grid.Column="5" Text="{Binding Phone}" />
+                                        <Label Grid.Column="6" Text="{Binding Address}" />
+                                        <Label Grid.Column="7" Text="{Binding City}" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

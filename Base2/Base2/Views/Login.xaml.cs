@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Base2.models;
+using Base2.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
 
 namespace Base2
 {
@@ -18,16 +20,15 @@ namespace Base2
             InitializeComponent();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
+            btnMostrarUser.Clicked += BtnMostrarUser_Clicked;
 
-            //defino login quemado de prueba
 
-            log = new List<LogIn>
-            {
-                new LogIn { Name = "Leandro", Email = "leandro@mail.com", Password = "L123" },
-                new LogIn { Name = "Yereth", Email = "yeretho@mail.com", Password = "G123" },
-                new LogIn { Name = "Gerald", Email = "gerald@mail.com", Password = "G123" },
-            };
 
+        }
+
+        private void BtnMostrarUser_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MostrarUsuarios());
         }
 
         private void BtnRegistrar_Clicked(object sender, EventArgs e)
@@ -40,16 +41,16 @@ namespace Base2
             string email = txtUser.Text;
             string Pass = txtPass.Text;
      
-
-            var user = log.FirstOrDefault(u => u.Email == email && u.Password == Pass);
+            var user =  UserRepository.Instancia.GetUserByEmailAndPassword(email, Pass);
+           
 
             if (user != null)
             {
-                string Welcome = $"Bienvenido {user.Name}";
+                string Welcome = $"Bienvenido {user.FirstName}";
                 await DisplayAlert(Welcome, "Login Success", "OK");
                 txtUser.Text = "";
                 txtPass.Text = "";
-                await Navigation.PushAsync(new MenuPrincipal(user.Name, user.Email));
+                await Navigation.PushAsync(new MenuPrincipal(user.FirstName, user.Email));
             }
             else
             {
@@ -57,5 +58,7 @@ namespace Base2
             }
 
         }
+      
+
     }
 }

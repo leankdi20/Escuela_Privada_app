@@ -19,18 +19,23 @@
                      Aspect="AspectFill" 
                      HorizontalOptions="CenterAndExpand" 
                      VerticalOptions="CenterAndExpand" 
-                     HeightRequest="200" 
-                     WidthRequest="200"/>   
+                     HeightRequest="125" 
+                     WidthRequest="125"/>   
             </StackLayout>
 
             <StackLayout Padding="20">
-                <Label Text="Register" x:Name="lblogin" FontSize="40" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
-                   Margin="0,-40,0,0" Padding="20" TextColor="White"  FontFamily="{StaticResource BaskervvilleSC-Regular}" />
+
                 <!-- Frame con esquinas redondeadas -->
-                <Frame CornerRadius="70" HeightRequest="300" Padding="0" HasShadow="True" Margin="-90,0,0,0" BackgroundColor="#3c575d">
+                <Frame CornerRadius="70" HeightRequest="550" Padding="0" HasShadow="True" Margin="-90,-30,0,0" BackgroundColor="#3c575d">
                     <Grid Padding="8">
 
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="1"/>
                             <RowDefinition Height="Auto"/>
@@ -72,7 +77,29 @@
                         <Entry Grid.Column="0" Grid.Row="6" Placeholder="Password"  TextColor="White" PlaceholderColor="White"
                                 BackgroundColor="Transparent" Margin="90,10,40,0"
                                 HorizontalOptions="FillAndExpand" x:Name="txtPassword" IsPassword="True"/>
-
+                        <!-- BoxView como línea divisoria -->
+                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" HeightRequest="1" 
+                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                        <!-- Entry para ingresar Phone -->
+                        <Entry Grid.Column="0" Grid.Row="8" Placeholder="Phone"  TextColor="White" PlaceholderColor="White"
+                            BackgroundColor="Transparent" Margin="90,10,40,0"
+                            HorizontalOptions="FillAndExpand" x:Name="txtPhone" />
+                        <!-- BoxView como línea divisoria -->
+                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="9" HeightRequest="1" 
+                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                        <!-- Entry para ingresar Phone -->
+                        <Entry Grid.Column="0" Grid.Row="10" Placeholder="Address"  TextColor="White" PlaceholderColor="White"
+                            BackgroundColor="Transparent" Margin="90,10,40,0"
+                            HorizontalOptions="FillAndExpand" x:Name="txtAddress" />
+                        <!-- BoxView como línea divisoria -->
+                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11" HeightRequest="1" 
+                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
+                        <!-- Entry para ingresar Phone -->
+                        <Entry Grid.Column="0" Grid.Row="12" Placeholder="City"  TextColor="White" PlaceholderColor="White"
+                            BackgroundColor="Transparent" Margin="90,10,40,0"
+                            HorizontalOptions="FillAndExpand" x:Name="txtCity" />
+                        
+                        
                         <!-- ImageButton colocado al lado del Frame -->
                         <ImageButton Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Source="agregarU.png" WidthRequest="60" HeightRequest="60" 
                              BackgroundColor="Transparent" VerticalOptions="Center"
@@ -82,6 +109,8 @@
 
                 <Label Text="¿Olvidaste tu contraseña?" x:Name="lbolvidaste" FontSize="15" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
                    Margin="0,-10,0,0" Padding="20" FontFamily="" TextColor="Gray"  />
+
+                
 
 
 

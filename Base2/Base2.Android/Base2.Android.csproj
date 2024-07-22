@@ -55,10 +55,14 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.9.172</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2662" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileAcces.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,9 +110,6 @@
     <AndroidResource Include="Resources\drawable\registrarse.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\escuelaPrivada.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Assets\OFL.txt" />
     <AndroidResource Include="Resources\drawable\agregarU.png" />
     <AndroidResource Include="Resources\drawable\notifi.png" />
@@ -119,6 +120,7 @@
     <AndroidResource Include="Resources\drawable\escuela1.jpg" />
     <AndroidResource Include="Resources\drawable\escuela2.jpeg" />
     <AndroidResource Include="Resources\drawable\escuela3.jpeg" />
+    <AndroidResource Include="Resources\drawable\escuelaPrivada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

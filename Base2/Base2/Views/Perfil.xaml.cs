@@ -19,7 +19,13 @@ namespace Base2
 			lblEmail.Text = email;
             btnInfoPersonal.Clicked += BtnInfoPersonal_Clicked;
             btnNotificaciones.Clicked += BtnNotificaciones_Clicked;
+            btnCerrar.Clicked += BtnCerrar_Clicked;
 		}
+
+        private void BtnCerrar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Login());
+        }
 
         private async void BtnNotificaciones_Clicked(object sender, EventArgs e)
         {
