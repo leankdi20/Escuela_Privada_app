@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Base2"
              x:Class="Base2.MenuPrincipal"
              Title="Menu Principal">
     <ContentPage.Content>
@@ -25,9 +26,10 @@
                     <Image Grid.Column="0" Source="escuelaPrivada.png" WidthRequest="60"  Margin="0,0,10,0"/>
                     <!-- Label en la primera columna -->
                     <Label Grid.Column="1" Text="Escuela Privada" FontSize="25" HorizontalOptions="Start" 
-                       FontFamily="{StaticResource BaskervvilleSC-Regular}" VerticalOptions="Center" TextColor="White" 
+                      VerticalOptions="Center" TextColor="White" 
                            Margin="0,0,0,10"/>
 
+                    <Label x:Name="StatusMessage" FontSize="Medium"/>
                     <!-- ImageButton en la segunda columna -->
                     <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
                              HorizontalOptions="End" VerticalOptions="Center"/>
@@ -49,7 +51,7 @@
                             </Grid.RowDefinitions>
 
                             <!-- Primer Label -->
-                            <Label Grid.Row="0" FontSize="30" x:Name="lblname" FontFamily="{StaticResource BaskervvilleSC-Regular}" 
+                            <Label Grid.Row="0" FontSize="30" x:Name="lblname" 
                                TextColor="White" Text="Bienvenido"/>
 
                             <!-- Segundo Label -->
@@ -107,40 +109,8 @@
                 </StackLayout>
             </ScrollView>
 
-
             <!-- Menú Inferior -->
-            <Grid Grid.Row="2" BackgroundColor="White" Padding="5" HeightRequest="55" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <!-- Botón Home -->
-                <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                    <ImageButton Source="home.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" x:Name="btnHome" />
-                    <Label Text="Home" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
-                </StackLayout>
-
-                <!-- Botón Estudiantes -->
-                <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                    <ImageButton Source="Estudiante.png" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" x:Name="btnEstudiante"/>
-                    <Label Text="Estudiantes" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
-                </StackLayout>
-
-                <!-- Botón Novedades -->
-                <StackLayout Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
-                    <ImageButton Source="novedades.png" WidthRequest="20" HeightRequest="20"  BackgroundColor="Transparent"  x:Name="btnNovedades"/>
-                    <Label Text="Novedades" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center"/>
-                </StackLayout>
-
-                <!-- Botón Perfil -->
-                <StackLayout Grid.Column="3" HorizontalOptions="Center" VerticalOptions="Center">
-                    <ImageButton Source="perfil.png" WidthRequest="20" HeightRequest="20"  BackgroundColor="Transparent" x:Name="btnPerfil"/>
-                    <Label Text="Perfil" FontSize="Small" TextColor="Gray" HorizontalTextAlignment="Center" />
-                </StackLayout>
-            </Grid>
+            <local:BottomMenu Grid.Row="2" />
 
         </Grid>
        

@@ -3,29 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Base2.models;
+using Base2.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using System.Linq.Expressions;
+
 
 namespace Base2
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+   
     public partial class Login : ContentPage
     {
         private List<LogIn> log;
+        private FBUserRepository userRepo;
         public Login()
         {
             InitializeComponent();
+            userRepo = new FBUserRepository();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
+            btnMostrarUser.Clicked += BtnMostrarUser_Clicked;
 
-            //defino login quemado de prueba
+        }
 
-            log = new List<LogIn>
-            {
-                new LogIn { Name = "Leandro", Email = "leandro@mail.com", Password = "L123" },
-            };
-
+        private void BtnMostrarUser_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MostrarUsuarios());
         }
 
         private void BtnRegistrar_Clicked(object sender, EventArgs e)
@@ -35,25 +42,39 @@ namespace Base2
 
         private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            string email = txtUser.Text;
+            string email = txtemail.Text;
             string Pass = txtPass.Text;
-     
-
-            var user = log.FirstOrDefault(u => u.Email == email && u.Password == Pass);
-
-            if (user != null)
+            try
             {
-                string Welcome = $"Bienvenido {user.Name}";
-                await DisplayAlert(Welcome, "Login Success", "OK");
-                txtUser.Text = "";
-                txtPass.Text = "";
-                await Navigation.PushAsync(new MenuPrincipal(user.Name));
-            }
-            else
-            {
-                await DisplayAlert("Login", "Login Failed", "OK");
-            }
+                if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(Pass))
+                {
+                    await DisplayAlert("Login", "Please enter both email and password", "OK");
+                    return;
+                }
 
+                var user = await userRepo.AuthenticateUser(email, Pass);
+
+                if (user != null)
+                {
+                    string welcomeMessage = $"Bienvenido {user.FirstName}";
+                    await DisplayAlert("Login Success", welcomeMessage, "OK");
+
+                    // Limpiar los campos de texto
+                    txtemail.Text = "";
+                    txtPass.Text = "";
+
+                    // Llevar al menú principal
+                    await Navigation.PushAsync(new MenuPrincipal(user.FirstName));
+                }
+                else
+                {
+                    await DisplayAlert("Login", "Login Failed", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Login", ex.Message, "OK");
+            }
         }
     }
 }

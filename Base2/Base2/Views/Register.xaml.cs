@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Base2.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,13 @@ namespace Base2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Register : ContentPage
     {
+        private FBUserRepository _userRepository;
         public Register()
         {
             InitializeComponent();
             btnRegister.Clicked += BtnRegister_Clicked;
             btnLogin.Clicked += BtnLogin_Clicked;
+            _userRepository = new FBUserRepository();
         }
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
@@ -26,47 +29,70 @@ namespace Base2
 
         private async void BtnRegister_Clicked(object sender, EventArgs e)
         {
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            string email = txtEmail.Text;
-            string password = txtPassword.Text;
+            string FirstName = txtFirstName.Text;
+            string LastName = txtLastName.Text;
+            string Email = txtEmail.Text;
+            string Password = txtPassword.Text;
+            string Phone = txtPhone.Text;
+            string Address = txtAddress.Text;
+            string City = txtCity.Text;
 
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            // Validación de campos
+            if (string.IsNullOrEmpty(FirstName) ||
+                string.IsNullOrEmpty(LastName) ||
+                string.IsNullOrEmpty(Email) ||
+                string.IsNullOrEmpty(Password) ||
+                string.IsNullOrEmpty(Phone) ||
+                string.IsNullOrEmpty(Address) ||
+                string.IsNullOrEmpty(City))
             {
                 await DisplayAlert("Registro", "Por favor llene todos los campos", "OK");
                 return;
             }
-            if (password.Length < 6)
+
+            if (Password.Length < 6)
             {
                 await DisplayAlert("Registro", "La contraseña debe tener al menos 6 caracteres", "OK");
                 return;
             }
-            if (!email.Contains("@"))
+
+            if (!Email.Contains("@"))
             {
-                await DisplayAlert("Registro", "Correo no valido", "OK");
+                await DisplayAlert("Registro", "Correo no válido", "OK");
                 return;
             }
-            if (!string.IsNullOrEmpty(firstName) &&
-                !string.IsNullOrEmpty(lastName) &&
-                !string.IsNullOrEmpty(email) &&
-                !string.IsNullOrEmpty(password))
+
+            // Todos los campos están llenos y válidos, guardar en la base de datos
+            try
             {
-                // Todos los campos están llenos, guardar en el arreglo
-                string[] userInfo = { firstName, lastName, email, password };
+                var newUser = new Usuario
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Email = txtEmail.Text,
+                    Password = txtPassword.Text,
+                    Phone = txtPhone.Text,
+                    Address = txtAddress.Text,
+                    City = txtCity.Text,
+                    //Image = imageEntry.Text, // Asume que tienes una entrada para la URL o el path de la imagen
+                    IdRol = 2 // Asigna el ID del rol "Padre"
+                };
 
-                // Aquí puedes agregar la lógica adicional, como guardar el arreglo en una base de datos o llamar a un servicio web
-
-                DisplayAlert("Registro", "Registro Exitoso", "OK");
-                txtEmail.Text = "";
-                txtFirstName.Text = "";
-                txtLastName.Text = "";
-                txtPassword.Text = "";
-                Navigation.PushAsync(new Login());
-
-                // Navegar a otra página si es necesario
-                // await Navigation.PushAsync(new SomeOtherPage());
+                bool isSaved = await _userRepository.Save(newUser);
+                if (isSaved)
+                {
+                    await DisplayAlert("Success", "User registered successfully", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "User registration failed", "OK");
+                }
+                await Navigation.PushAsync(new Login());
             }
-            await DisplayAlert("Registro", "Registro Exitoso", "OK");
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", "Ocurrió un error: " + ex.Message, "OK");
+            }
         }
     }
 }

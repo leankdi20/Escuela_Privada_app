@@ -1,0 +1,13 @@
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\_ProcessedBundleResourcesPath.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\_ProcessedContentPath.items
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\optimized\
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\Base2.iOS.csproj.AssemblyReference.cache
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.iOS\obj\iPhone\Debug\Base2.iOS.csproj.CoreCompileInputs.cache
