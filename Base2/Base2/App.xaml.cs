@@ -12,13 +12,29 @@ namespace Base2
         public App()
         {
             InitializeComponent();
-            // Obtener la ruta de la base de datos
-            var databasePath = Path.Combine(FileSystem.AppDataDirectory, "miBaseDeDatos.db3");
 
-            // Inicializar el repositorio de usuarios
-            UserRepository.Inicializador(databasePath);
+            // Inicializar roles al inicio de la aplicación
+            //var userRepository = new FBUserRepository();
+            //userRepository.InitializeRoles().Wait();
             //MainPage = new MainPage();
             MainPage = new NavigationPage(new Login());
+
+            // Inicializar roles en segundo plano
+            InitializeRolesAsync();
+        }
+
+        private async void InitializeRolesAsync()
+        {
+            try
+            {
+                var userRepository = new FBUserRepository();
+                await userRepository.InitializeRoles();
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                Console.WriteLine($"Error initializing roles: {ex.Message}");
+            }
         }
 
         protected override void OnStart()

@@ -13,11 +13,13 @@ namespace Base2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Register : ContentPage
     {
+        private FBUserRepository _userRepository;
         public Register()
         {
             InitializeComponent();
             btnRegister.Clicked += BtnRegister_Clicked;
             btnLogin.Clicked += BtnLogin_Clicked;
+            _userRepository = new FBUserRepository();
         }
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
@@ -63,20 +65,28 @@ namespace Base2
             // Todos los campos están llenos y válidos, guardar en la base de datos
             try
             {
-                UserRepository.Instancia.AddNewUser(FirstName, LastName, Email, Password, Phone, Address, City);
+                var newUser = new Usuario
+                {
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    Email = txtEmail.Text,
+                    Password = txtPassword.Text,
+                    Phone = txtPhone.Text,
+                    Address = txtAddress.Text,
+                    City = txtCity.Text,
+                    //Image = imageEntry.Text, // Asume que tienes una entrada para la URL o el path de la imagen
+                    IdRol = 2 // Asigna el ID del rol "Padre"
+                };
 
-                await DisplayAlert("Registro", "Registro Exitoso", "OK");
-
-                // Limpiar campos
-                txtFirstName.Text = "";
-                txtLastName.Text = "";
-                txtEmail.Text = "";
-                txtPassword.Text = "";
-                txtPhone.Text = "";
-                txtAddress.Text = "";
-                txtCity.Text = "";
-
-                // Navegar a la página de inicio de sesión
+                bool isSaved = await _userRepository.Save(newUser);
+                if (isSaved)
+                {
+                    await DisplayAlert("Success", "User registered successfully", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "User registration failed", "OK");
+                }
                 await Navigation.PushAsync(new Login());
             }
             catch (Exception ex)

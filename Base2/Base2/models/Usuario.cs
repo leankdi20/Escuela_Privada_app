@@ -12,7 +12,7 @@ namespace Base2
     public class Usuario
     {
         [PrimaryKey, AutoIncrement]
-        public int IdUser { get; set; }
+        public String IdUser { get; set; }
 
         [MaxLength(50)]
         public String FirstName { get; set; }
@@ -34,6 +34,9 @@ namespace Base2
 
         [MaxLength(50)]
         public String City { get; set; }
+
+        [MaxLength(500)]
+        public string Image { get; set; }
 
         // Propiedad para la FK
         public int IdRol { get; set; }

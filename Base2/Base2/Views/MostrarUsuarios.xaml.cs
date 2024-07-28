@@ -27,8 +27,8 @@ namespace Base2.Views
         {
             try
             {
-                IEnumerable<Usuario> users = UserRepository.Instancia.GetAllUsers();
-                 UserListView.ItemsSource = users;
+               // IEnumerable<Usuario> users = UserRepository.Instancia.GetAllUsers();
+               //  UserListView.ItemsSource = users;
             }
             catch (Exception ex)
             {

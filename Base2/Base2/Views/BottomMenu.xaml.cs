@@ -56,7 +56,7 @@ namespace Base2
             ShowMessage("Página principal");
             await Task.Delay(2000);
             HideMessage();
-            await Navigation.PushAsync(new MenuPrincipal(Firstname, Email));
+            await Navigation.PushAsync(new MenuPrincipal(Firstname));
         }
 
         private void ShowMessage(string message)

@@ -3,52 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\perfil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\perfil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\fbuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\fbuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\perfil.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\perfil.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\login.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\login.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\mostrarusuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\mostrarusuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\mostrarusuarios.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\mostrarusuarios.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\menuprincipal.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\menuprincipal.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\menuprincipal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\menuprincipal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\bottommenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\bottommenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\mostrarusuarios.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\mostrarusuarios.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\perfil.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\perfil.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\register.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\register.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\mostrarusuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\mostrarusuarios.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\perfil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\perfil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\models\\carouselitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\models\\carouselitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|c:\\users\\leanv\\onedrive\\escritorio\\vii_cuatrimestre\\lenguaje c#\\escuela_privada_app\\base2\\base2\\views\\bottommenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B3D908-7FC5-44CB-B35E-9C5702C0DD32}|Base2\\Base2\\Base2.csproj|solutionrelative:base2\\base2\\views\\bottommenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4825A297-4BED-46D7-9F12-06D5DB25C3CF}|Base2\\Base2.Android\\Base2.Android.csproj|C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\base2\\base2.android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,9 +89,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 244,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 221,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Login.xaml",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Login.xaml",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Login.xaml",
+              "RelativeToolTip": "Base2\\Base2\\Views\\Login.xaml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADIAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-07T18:40:12.334Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -104,22 +113,74 @@
               "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Login.xaml.cs",
               "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Login.xaml.cs",
               "RelativeToolTip": "Base2\\Base2\\Views\\Login.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwCMAAAAxAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAApwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T18:42:15.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Perfil.xaml",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Perfil.xaml",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml",
-              "RelativeToolTip": "Base2\\Base2\\Views\\Perfil.xaml",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAkwIIAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-13T19:03:27.853Z",
+              "DocumentIndex": 3,
+              "Title": "MenuPrincipal.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T00:59:53.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BottomMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\BottomMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\Views\\BottomMenu.xaml.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAD4vzoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T05:04:26.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FBUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\FBUserRepository.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\models\\FBUserRepository.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\FBUserRepository.cs",
+              "RelativeToolTip": "Base2\\Base2\\models\\FBUserRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswCQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T23:07:37.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MostrarUsuarios.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAtwB4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T04:27:17.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Perfil.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Perfil.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\Views\\Perfil.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBgAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T19:20:50.735Z",
               "EditorCaption": ""
             },
             {
@@ -137,80 +198,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MostrarUsuarios.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
-              "RelativeToolTip": "Base2\\Base2\\Views\\MostrarUsuarios.xaml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAhwB4AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T04:27:17.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MenuPrincipal.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
-              "RelativeToolTip": "Base2\\Base2\\Views\\MenuPrincipal.xaml.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAgwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:59:53.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Perfil.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Perfil.xaml.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml.cs",
-              "RelativeToolTip": "Base2\\Base2\\Views\\Perfil.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T19:20:50.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Register.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Register.xaml.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml.cs",
-              "RelativeToolTip": "Base2\\Base2\\Views\\Register.xaml.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAgwDwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T22:08:50.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\models\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\UserRepository.cs",
-              "RelativeToolTip": "Base2\\Base2\\models\\UserRepository.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAiwHgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T23:07:54.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MenuPrincipal.xaml",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\MenuPrincipal.xaml",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\MenuPrincipal.xaml",
-              "RelativeToolTip": "Base2\\Base2\\Views\\MenuPrincipal.xaml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAiAAAA",
+              "Title": "Perfil.xaml",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Perfil.xaml",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Perfil.xaml",
+              "RelativeToolTip": "Base2\\Base2\\Views\\Perfil.xaml",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAkwIIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-07T19:56:15.234Z",
+              "WhenOpened": "2024-07-13T19:03:27.853Z",
               "EditorCaption": ""
             },
             {
@@ -241,20 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LogIn.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\LogIn.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\models\\LogIn.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\LogIn.cs",
-              "RelativeToolTip": "Base2\\Base2\\models\\LogIn.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:58:57.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Estudiante.cs",
               "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\Estudiante.cs",
               "RelativeDocumentMoniker": "Base2\\Base2\\models\\Estudiante.cs",
@@ -267,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "MainActivity.cs",
               "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "Base2\\Base2.Android\\MainActivity.cs",
@@ -276,19 +259,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-21T20:14:57.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "BottomMenu.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml.cs",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\BottomMenu.xaml.cs",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml.cs",
-              "RelativeToolTip": "Base2\\Base2\\Views\\BottomMenu.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowEEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T05:04:26.111Z",
               "EditorCaption": ""
             },
             {
@@ -306,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Asistencia.cs",
               "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\Asistencia.cs",
               "RelativeDocumentMoniker": "Base2\\Base2\\models\\Asistencia.cs",
@@ -319,13 +289,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "BottomMenu.xaml",
               "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml",
               "RelativeDocumentMoniker": "Base2\\Base2\\Views\\BottomMenu.xaml",
               "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\BottomMenu.xaml",
               "RelativeToolTip": "Base2\\Base2\\Views\\BottomMenu.xaml",
-              "ViewState": "AQIAAAYAAAAAAAAAAIBJwCcAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwCcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-07-14T05:01:44.38Z",
               "EditorCaption": ""
@@ -333,20 +303,46 @@
           ]
         },
         {
-          "DockedWidth": 156,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 179,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "Register.xaml",
               "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml",
               "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Register.xaml",
               "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml",
               "RelativeToolTip": "Base2\\Base2\\Views\\Register.xaml",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAWwHAAAAAQAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-07-07T20:06:13.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Register.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Register.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\Views\\Register.xaml.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAkwFAAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T22:08:50.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Base2\\Base2\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\App.xaml.cs",
+              "RelativeToolTip": "Base2\\Base2\\App.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T22:24:52.188Z",
               "EditorCaption": ""
             },
             {
@@ -357,22 +353,9 @@
               "RelativeDocumentMoniker": "Base2\\Base2\\models\\Usuario.cs",
               "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\models\\Usuario.cs",
               "RelativeToolTip": "Base2\\Base2\\models\\Usuario.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA3wAUAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-21T20:51:19.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Login.xaml",
-              "RelativeDocumentMoniker": "Base2\\Base2\\Views\\Login.xaml",
-              "ToolTip": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Views\\Login.xaml",
-              "RelativeToolTip": "Base2\\Base2\\Views\\Login.xaml",
-              "ViewState": "AQIAABQAAAAAAAAAAAAWwCkAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-07T18:40:12.334Z",
               "EditorCaption": ""
             }
           ]

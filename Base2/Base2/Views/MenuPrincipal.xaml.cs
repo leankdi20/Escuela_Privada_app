@@ -17,12 +17,12 @@ namespace Base2
         public Usuario usuario { get; set; }
         string firstname;
         string Email;
-        public MenuPrincipal(string name, string email)
+        public MenuPrincipal(string name)
         {
             InitializeComponent();
 
             firstname = name;
-            Email = email;
+            //Email = email;
             lblname.Text = "¡Bienvenido " + firstname + "!";
            
 
