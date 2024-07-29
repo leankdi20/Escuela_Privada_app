@@ -17,8 +17,8 @@ namespace Base2.models
         [MaxLength(50)]
         public string LastName { get; set; }
 
-        [MaxLength(50)]
-        public string Email { get; set; }
+        [MaxLength(10)]
+        public DateTime FechaNacimiento { get; set; }
 
         [MaxLength(100)]
         public string Address { get; set; }

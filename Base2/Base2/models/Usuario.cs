@@ -3,7 +3,7 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SQLite;
+
 
 
 namespace Base2
@@ -36,12 +36,19 @@ namespace Base2
         public String City { get; set; }
 
         [MaxLength(500)]
-        public string Image { get; set; }
+        public string FotoPerfil { get; set; }
+
+        public DateTime? FechaNacimiento { get; set; }
+
+        [MaxLength(50)]
+        public int Edad { get; set; }
 
         // Propiedad para la FK
         public int IdRol { get; set; }
 
         [Ignore]
         public Rol Rol { get; set; }
+
+     
     }
 }

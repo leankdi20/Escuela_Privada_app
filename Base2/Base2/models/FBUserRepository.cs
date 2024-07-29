@@ -86,7 +86,7 @@ namespace Base2.models
             {
                 Email = item.Object.Email,
                 FirstName = item.Object.FirstName,
-                Image = item.Object.Image,
+                FotoPerfil = item.Object.FotoPerfil,
                 IdUser = item.Key,
                 Password = item.Object.Password
             }).ToList();
@@ -97,7 +97,7 @@ namespace Base2.models
             {
                 Email = item.Object.Email,
                 FirstName = item.Object.FirstName,
-                Image = item.Object.Image,
+                FotoPerfil = item.Object.FotoPerfil,
                 IdUser = item.Key,
                 Password = item.Object.Password
             }).Where(c => c.FirstName.ToLower().Contains(name.ToLower())).ToList();

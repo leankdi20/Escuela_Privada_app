@@ -63,8 +63,11 @@ namespace Base2
                     txtemail.Text = "";
                     txtPass.Text = "";
 
+                    SessionData.UserName = user.FirstName;
+                    SessionData.Email = user.Email;
+
                     // Llevar al menú principal
-                    await Navigation.PushAsync(new MenuPrincipal(user.FirstName));
+                    await Navigation.PushAsync(new MenuPrincipal());
                 }
                 else
                 {

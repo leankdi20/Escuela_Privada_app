@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Base2"
              x:Class="Base2.MenuPrincipal"
-             Title="Menu Principal">
+             Title="Menu Principal"
+             BackgroundColor="#e8e8e8">
     <ContentPage.Content>
         <Grid >
             <!-- Definición de filas -->
@@ -80,11 +81,22 @@
 
                     </Grid>
                     <!-- Texto en la parte superior -->
-                    <Label Text="Mis Estudiantes" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" 
-                               VerticalOptions="Start" Margin="20,30,0,0" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Mis Estudiantes" 
+                           FontSize="25"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Center" 
+                           VerticalOptions="Start"
+                           Margin="0,30,0,0" 
+                           HorizontalOptions="Center"/>
                     <!-- Botón personalizado -->
-                    <Frame BackgroundColor="White" CornerRadius="10" HeightRequest="120" WidthRequest="120" HasShadow="True"    
-                                   HorizontalOptions="Start" VerticalOptions="Center" Padding="15" Margin="40,0,0,0">
+                    <Frame BackgroundColor="White"
+                           CornerRadius="10"
+                           HeightRequest="120"
+                           WidthRequest="120"
+                           HasShadow="True"    
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"
+                           Padding="15" Margin="0,0,0,0">
 
                         <StackLayout>
                             <!-- Imagen y texto centrados -->
@@ -94,17 +106,17 @@
                             </StackLayout>
                         </StackLayout>
                     </Frame>
-                    <Frame BackgroundColor="White" CornerRadius="10" HeightRequest="120" WidthRequest="120" HasShadow="True"    
+                    <!-- <Frame BackgroundColor="White" CornerRadius="10" HeightRequest="120" WidthRequest="120" HasShadow="True"    
                         HorizontalOptions="Start" VerticalOptions="Center" Padding="15" Margin="40,0,0,0">
 
                         <StackLayout>
-                            <!-- Imagen y texto centrados -->
+                             Imagen y texto centrados
                             <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                                 <ImageButton Source="agregar.png" WidthRequest="40" HeightRequest="40" x:Name="btnAnuncio" Margin="10" BackgroundColor="Transparent"/>
                                 <Label Text="Añadir anuncio" FontSize="Medium" TextColor="Black" HorizontalTextAlignment="Center"/>
                             </StackLayout>
                         </StackLayout>
-                    </Frame>
+                    </Frame> -->
 
                 </StackLayout>
             </ScrollView>
