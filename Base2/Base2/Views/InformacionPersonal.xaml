@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Base2"
+             x:Class="Base2.Views.InformacionPersonal"
+             BackgroundColor="#f7f7f7">
+    <ContentPage.Content>
+        <StackLayout>
+           
+          
+
+            <!-- Fondo Cuadrado Redondeado -->
+            <Frame BackgroundColor="Transparent" Padding="0" HasShadow="False" CornerRadius="30" Margin="-90,-30,0,0">
+                <Grid BackgroundColor="#3B5998"
+                      HeightRequest="350"
+                      
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="Start">
+                </Grid>
+            </Frame>
+           
+             <!-- Encabezado -->
+            <StackLayout Padding="0" Spacing="0" Margin="0,-320,0,0">
+                <!-- Perfil del Usuario -->
+                <Frame CornerRadius="0" Padding="10" BackgroundColor="Transparent" HasShadow="True" HeightRequest="50" Margin="0,-0,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Perfil" 
+                           FontSize="20" 
+                           HorizontalOptions="Start"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="0"/>
+                        
+                        <!-- Boton editar foto -->
+                        <ImageButton Source="editar.png" 
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="40"
+                                 WidthRequest="40"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center"
+                                 Margin="0,0,15,0"
+                                 Grid.Column="1"
+                                 x:Name="btnEditarFoto"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+
+
+            <StackLayout Padding="20" Spacing="5" Margin="0,-10,0,0"  >
+                <!-- Perfil del Usuario -->
+                <Frame CornerRadius="20" Padding="10" BackgroundColor="White" HasShadow="True" HeightRequest="400" Margin="20,0,20,0">
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                        <Frame CornerRadius="50" HeightRequest="300" WidthRequest="100" Margin="50,0,50,0" Padding="0" IsClippedToBounds="True"   >
+                            <Image x:Name="ProfileImage" Source="FotoPadre.png" HeightRequest="100" WidthRequest="80" Aspect="Fill"
+                                  Margin="0,-20,0,0" />
+                        </Frame>
+                        
+                        <Button Text="Guardar Foto" x:Name="btnGuardarFoto" HeightRequest="40" WidthRequest="20" Padding="10" Margin="50,0,50,0"/>
+                        
+                        <Label Text="Ricardo Joseph" 
+                               x:Name="txtNombre"
+                                FontSize="18" 
+                                FontAttributes="Bold" 
+                                HorizontalOptions="Center"
+                               TextColor="Black"/>
+                                    
+                        <Label Text="ricardojoseph@gmail.com" 
+                                FontSize="14" 
+                                HorizontalOptions="Center"
+                               TextColor="Black"
+                               x:Name="txtEmail"/>
+
+                        <!-- Grid para Fecha de Nacimiento, Edad y Sexo -->
+                        <Grid Margin="10,20,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Fecha de Nacimiento" HorizontalOptions="Center" TextColor="Black" Grid.Column="0" />
+                            <Label Text="Edad" HorizontalOptions="Center" TextColor="Black" Grid.Column="1" />
+                            <Label Text="Genero" HorizontalOptions="Center" TextColor="Black" Grid.Column="2" />
+
+                            <Label Text="20/03/1991" x:Name="txtFechaNacimiento" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="0" />
+                            <Label Text="33" x:Name="txtEdad" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="1" />
+                            <Label Text="Masculino" x:Name="txtGenero" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="2" />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+
+            <Label Text="General" 
+                   Margin="22,0,0,0"
+                     FontSize="16" 
+                     FontAttributes="Bold" 
+                     HorizontalOptions="Start"
+                    TextColor="Black"/>
+            
+            
+            <!-- Contenido Principal en un ScrollView -->
+            <ScrollView>
+                <!-- Opciones de Configuración -->
+                <StackLayout Padding="20">
+                    <!-- Agregar alumno -->
+                    <Frame Padding="10" BackgroundColor="White" HasShadow="True" CornerRadius="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Agregar alumno" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
+                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <!-- Listados de Hijos o alumnos a su nombre -->
+                    <Frame Padding="10" BackgroundColor="White" HasShadow="True" CornerRadius="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Lista de alumno" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
+                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <!-- Calificaciones de su Hijo -->
+                    <Frame Padding="10" BackgroundColor="White" HasShadow="True" CornerRadius="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Calificaciones" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
+                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+            <!-- Menú Inferior -->
+            <local:BottomMenu Grid.Row="1" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

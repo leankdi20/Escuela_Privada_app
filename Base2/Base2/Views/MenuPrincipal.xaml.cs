@@ -15,15 +15,14 @@ namespace Base2
     {
         public ObservableCollection<CarouselItem> CarouselItems { get; set; }
         public Usuario usuario { get; set; }
-        string firstname;
-        string Email;
-        public MenuPrincipal(string name)
+       
+        public MenuPrincipal()
         {
             InitializeComponent();
 
-            firstname = name;
+            
             //Email = email;
-            lblname.Text = "¡Bienvenido " + firstname + "!";
+            lblname.Text = "¡Bienvenido " + SessionData.UserName + "!";
            
 
 
@@ -37,7 +36,7 @@ namespace Base2
             BindingContext = this;
 
             btnAdd.Clicked += BtnAdd_Clicked;
-            btnAnuncio.Clicked += BtnAnuncio_Clicked;
+           // btnAnuncio.Clicked += BtnAnuncio_Clicked;
 
         }
 

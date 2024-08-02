@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Base2.models;
+using Base2.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +14,11 @@ namespace Base2
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Perfil : ContentPage
 	{
-		public Perfil (string firstName, string email)
+		public Perfil ()
 		{
 			InitializeComponent ();
-			lblName.Text = firstName;
-			lblEmail.Text = email;
+            lblName.Text = SessionData.UserName;
+            lblEmail.Text = SessionData.Email;
             btnInfoPersonal.Clicked += BtnInfoPersonal_Clicked;
             btnNotificaciones.Clicked += BtnNotificaciones_Clicked;
             btnCerrar.Clicked += BtnCerrar_Clicked;
@@ -34,7 +36,8 @@ namespace Base2
 
         private async void BtnInfoPersonal_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Info Personal", "Notificaciones de la escuela", "OK");
+            await Navigation.PushAsync(new InformacionPersonal());
+            //await DisplayAlert("Info Personal", "Notificaciones de la escuela", "OK");
         }
     }
 }

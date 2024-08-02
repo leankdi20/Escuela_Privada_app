@@ -34,7 +34,7 @@ namespace Base2
             ShowMessage("Perfil del usuario");
             await Task.Delay(2000);
             HideMessage();
-            await Navigation.PushAsync(new Perfil(Firstname, Email));
+            await Navigation.PushAsync(new Perfil());
         }
 
         private async void BtnNovedades_Clicked(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace Base2
             ShowMessage("Página principal");
             await Task.Delay(2000);
             HideMessage();
-            await Navigation.PushAsync(new MenuPrincipal(Firstname));
+            await Navigation.PushAsync(new MenuPrincipal());
         }
 
         private void ShowMessage(string message)
