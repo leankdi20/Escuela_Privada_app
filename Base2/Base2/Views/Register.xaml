@@ -7,118 +7,91 @@
     
     <ContentPage.Content>
 
+        <ScrollView>
+            <StackLayout VerticalOptions="Start">
+                <!-- Imagen de la escuela -->
+                <StackLayout Margin="0,0,0,0">
+                    <Image Source="escuelaPrivada.png" 
+                           Aspect="AspectFill" 
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="CenterAndExpand" 
+                           HeightRequest="125" 
+                           WidthRequest="125"/>
+                </StackLayout>
 
+                <StackLayout Padding="20">
+                    <!-- Frame con esquinas redondeadas -->
+                    <Frame CornerRadius="70" HeightRequest="450" Padding="0" HasShadow="True" Margin="-0,-30,0,0" BackgroundColor="#3c575d">
+                        <Grid Padding="8">
 
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
+                            <!-- Entry para ingresar First Name -->
+                            <Entry Grid.Column="0" Grid.Row="0" Placeholder="First Name" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="10,10,5,0" HorizontalOptions="FillAndExpand" x:Name="txtFirstName"/>
+                            <Entry Grid.Column="1" Grid.Row="0" Placeholder="Last Name" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="txtLastName"/>
 
-        <StackLayout VerticalOptions="Start">
+                            <!-- Entry para ingresar Email -->
+                            <Entry Grid.Column="0" Grid.Row="1" Placeholder="Email" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="10,10,5,0" HorizontalOptions="FillAndExpand" x:Name="txtEmail" Keyboard="Email" />
+                            <Entry Grid.Column="1" Grid.Row="1" Placeholder="Phone" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="txtPhone"/>
 
-            <!-- Imagen de la escuela -->
-            <StackLayout Margin="0,0,0,0">
-                <Image Source="escuelaPrivada.png" 
-                     Aspect="AspectFill" 
-                     HorizontalOptions="CenterAndExpand" 
-                     VerticalOptions="CenterAndExpand" 
-                     HeightRequest="125" 
-                     WidthRequest="125"/>   
+                            <!-- Entry para ingresar Password -->
+                            <Entry Grid.Column="0" Grid.Row="2" Placeholder="Password" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="10,10,5,0" HorizontalOptions="FillAndExpand" x:Name="txtPassword" IsPassword="True"/>
+                            <Entry Grid.Column="1" Grid.Row="2" Placeholder="Address" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="txtAddress"/>
+
+                            <!-- Entry para ingresar City -->
+                            <Entry Grid.Column="0" Grid.Row="3" Placeholder="City" TextColor="White" PlaceholderColor="White"
+                                   BackgroundColor="Transparent" Margin="10,10,5,0" HorizontalOptions="FillAndExpand" x:Name="txtCity"/>
+
+                            <!-- Picker para seleccionar género -->
+                            <Picker Grid.Column="1" Grid.Row="3" Title="Gender" TextColor="White" BackgroundColor="Transparent" 
+                                    Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="pickerGender">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>Male</x:String>
+                                        <x:String>Female</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+
+                            <!-- DatePicker para seleccionar fecha de nacimiento -->
+                            <Label Text="Date of Birth" Grid.Column="0" Grid.Row="4" TextColor="White" Margin="10,50,5,0" HorizontalOptions="FillAndExpand"/>
+                            <DatePicker Grid.Column="0" Grid.Row="4" TextColor="White" BackgroundColor="Transparent" 
+                                        Margin="10,60,5,0" HorizontalOptions="FillAndExpand" x:Name="datePickerDOB" />
+
+                            <!-- ImageButton colocado al lado del Frame -->
+                            <ImageButton Grid.Column="1" Grid.Row="4" Source="agregarU.png" WidthRequest="60" HeightRequest="60" 
+                                         BackgroundColor="Transparent" VerticalOptions="Center" Margin="0,70,0,0" x:Name="btnRegister"/>
+                        </Grid>
+                    </Frame>
+
+                    <Label Text="¿Olvidaste tu contraseña?" x:Name="lbolvidaste" FontSize="15" VerticalOptions="Center" 
+                           HorizontalOptions="CenterAndExpand" Margin="0,-10,0,0" Padding="20" FontFamily="" TextColor="Gray"  />
+
+                    <Button Text="Login" CornerRadius="30" Margin="-60,-10,230,0" x:Name="btnLogin" BackgroundColor="#edcd91" 
+                            TextColor="#365359"/>
+                </StackLayout>
             </StackLayout>
-
-            <StackLayout Padding="20">
-
-                <!-- Frame con esquinas redondeadas -->
-                <Frame CornerRadius="70" HeightRequest="550" Padding="0" HasShadow="True" Margin="-90,-30,0,0" BackgroundColor="#3c575d">
-                    <Grid Padding="8">
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Entry para ingresar First Name -->
-                        <Entry Grid.Column="0" Grid.Row="0" Placeholder="First Name" TextColor="White" PlaceholderColor="White"
-                              BackgroundColor="Transparent" Margin="90,10,40,0" HorizontalOptions="FillAndExpand" x:Name="txtFirstName"/>
-
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HeightRequest="1" 
-                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-
-                        <!-- Entry para ingresar Last Name -->
-                        <Entry Grid.Column="0" Grid.Row="2" Placeholder="Last Name" TextColor="White" PlaceholderColor="White"
-                             BackgroundColor="Transparent" Margin="90,10,40,0" HorizontalOptions="FillAndExpand" x:Name="txtLastName"/>
-
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" HeightRequest="1" 
-                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-
-                        <!-- Entry para ingresar Email -->
-                        <Entry Grid.Column="0" Grid.Row="4" Placeholder="Email" TextColor="White" PlaceholderColor="White"
-                             BackgroundColor="Transparent" Margin="90,10,40,0" HorizontalOptions="FillAndExpand" x:Name="txtEmail"  Keyboard="Email" />
-
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" HeightRequest="1" 
-                             Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-
-                        <!-- Entry para ingresar Password -->
-                        <Entry Grid.Column="0" Grid.Row="6" Placeholder="Password"  TextColor="White" PlaceholderColor="White"
-                                BackgroundColor="Transparent" Margin="90,10,40,0"
-                                HorizontalOptions="FillAndExpand" x:Name="txtPassword" IsPassword="True"/>
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" HeightRequest="1" 
-                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-                        <!-- Entry para ingresar Phone -->
-                        <Entry Grid.Column="0" Grid.Row="8" Placeholder="Phone"  TextColor="White" PlaceholderColor="White"
-                            BackgroundColor="Transparent" Margin="90,10,40,0"
-                            HorizontalOptions="FillAndExpand" x:Name="txtPhone" />
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="9" HeightRequest="1" 
-                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-                        <!-- Entry para ingresar Phone -->
-                        <Entry Grid.Column="0" Grid.Row="10" Placeholder="Address"  TextColor="White" PlaceholderColor="White"
-                            BackgroundColor="Transparent" Margin="90,10,40,0"
-                            HorizontalOptions="FillAndExpand" x:Name="txtAddress" />
-                        <!-- BoxView como línea divisoria -->
-                        <BoxView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11" HeightRequest="1" 
-                              Margin="0,0,0,0" Color="Gray" HorizontalOptions="FillAndExpand"/>
-                        <!-- Entry para ingresar Phone -->
-                        <Entry Grid.Column="0" Grid.Row="12" Placeholder="City"  TextColor="White" PlaceholderColor="White"
-                            BackgroundColor="Transparent" Margin="90,10,40,0"
-                            HorizontalOptions="FillAndExpand" x:Name="txtCity" />
-                        
-                        
-                        <!-- ImageButton colocado al lado del Frame -->
-                        <ImageButton Grid.Column="1" Grid.Row="0" Grid.RowSpan="7" Source="agregarU.png" WidthRequest="60" HeightRequest="60" 
-                             BackgroundColor="Transparent" VerticalOptions="Center"
-                             Margin="0,70,0,0" x:Name="btnRegister"/>   
-                    </Grid>
-                </Frame>
-
-                <Label Text="¿Olvidaste tu contraseña?" x:Name="lbolvidaste" FontSize="15" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
-                   Margin="0,-10,0,0" Padding="20" FontFamily="" TextColor="Gray"  />
-
-                
-
-
-
-                <Button Text="Login" CornerRadius="30" Margin="-60,-10,230,0" x:Name="btnLogin" BackgroundColor="#edcd91" 
-                         TextColor="#365359"/>
-            </StackLayout>
-        </StackLayout>
-
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>

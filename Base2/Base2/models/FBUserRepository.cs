@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Firebase.Database.Query;
+using SQLite;
 //using Firebase.Auth;
 
 
@@ -15,7 +16,7 @@ namespace Base2.models
 {
     public class FBUserRepository
     {
-
+    
         FirebaseClient firebaseClient = new FirebaseClient("https://escuelaprivada-856f0-default-rtdb.firebaseio.com/");
 
 
@@ -26,16 +27,32 @@ namespace Base2.models
             try
             {
                 var users = await GetAll();
+                Console.WriteLine("Usuarios obtenidos:");
+                foreach (var u in users)
+                {
+                    Console.WriteLine($"Email: {u.Email}, Password: {u.Password}, FotoPerfil: {u.FotoPerfil}");
+                }
+
                 var user = users.FirstOrDefault(u => u.Email == email && u.Password == password);
+                if (user == null)
+                {
+                    Console.WriteLine("Usuario no encontrado.");
+                }
+                else
+                {
+                    Console.WriteLine($"Usuario encontrado: {user.Email}");
+                }
+
                 return user;
             }
             catch (Exception ex)
             {
-                // Loggear o manejar la excepción según sea necesario
                 Console.WriteLine($"Error authenticating user: {ex.Message}");
                 return null;
             }
         }
+
+
 
         public async Task InitializeRoles()
         {
@@ -71,26 +88,100 @@ namespace Base2.models
             }
         }
 
-        public async Task<bool> Save(Usuario student)
+        public async Task<bool> Save(Usuario user)
         {
-            var data = await firebaseClient.Child(nameof(Usuario)).PostAsync(JsonConvert.SerializeObject(student));
-            if (!string.IsNullOrEmpty(data.Key))
+            try
             {
-                return true;
+                // Inicializar FotoPerfil como cadena vacía si no está inicializado
+                if (string.IsNullOrEmpty(user.FotoPerfil))
+                {
+                    user.FotoPerfil = string.Empty;
+                }
+
+                var data = await firebaseClient.Child(nameof(Usuario)).PostAsync(JsonConvert.SerializeObject(user));
+                if (!string.IsNullOrEmpty(data.Key))
+                {
+                    user.IdUser = data.Key;  // Asignar la clave generada al usuario
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving user: {ex.Message}");
+                return false;
+            }
         }
+
+
+
         public async Task<List<Usuario>> GetAll()
         {
-            return (await firebaseClient.Child(nameof(Usuario)).OnceAsync<Usuario>()).Select(item => new Usuario
+            try
             {
-                Email = item.Object.Email,
-                FirstName = item.Object.FirstName,
-                FotoPerfil = item.Object.FotoPerfil,
-                IdUser = item.Key,
-                Password = item.Object.Password
-            }).ToList();
+                var usuarios = (await firebaseClient.Child(nameof(Usuario)).OnceAsync<Usuario>()).Select(item => new Usuario
+                {
+                    Email = item.Object.Email,
+                    FirstName = item.Object.FirstName,
+                    FotoPerfil = item.Object.FotoPerfil,
+                    IdUser = item.Key,
+                    Password = item.Object.Password,
+                    LastName = item.Object.LastName,
+                    Phone = item.Object.Phone,
+                    Address = item.Object.Address,
+                    City = item.Object.City,
+                    FechaNacimiento = item.Object.FechaNacimiento,
+                    Edad = item.Object.Edad,
+                    Genero = item.Object.Genero,
+                    IdRol = item.Object.IdRol
+                }).ToList();
+
+                Console.WriteLine("Cantidad de usuarios obtenidos: " + usuarios.Count);
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener usuarios: {ex.Message}");
+                return new List<Usuario>();
+            }
         }
+
+
+        public async Task<Usuario> GetUserById(string id)
+        {
+            try
+            {
+                var user = await firebaseClient.Child(nameof(Usuario) + "/" + id).OnceSingleAsync<Usuario>();
+                if (user == null)
+                {
+                    Console.WriteLine($"Usuario con Id: {id} no encontrado.");
+                }
+                return user;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting user by ID: {ex.Message}");
+                return null;
+            }
+        }
+
+
+        public async Task<bool> UpdateUser(Usuario user)
+        {
+            try
+            {
+                await firebaseClient.Child(nameof(Usuario) + "/" + user.IdUser).PutAsync(JsonConvert.SerializeObject(user));
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error updating user: {ex.Message}");
+                return false;
+            }
+        }
+
+
+
         public async Task<List<Usuario>> GetAllByName(string name)
         {
             return (await firebaseClient.Child(nameof(Usuario)).OnceAsync<Usuario>()).Select(item => new Usuario
@@ -110,6 +201,8 @@ namespace Base2.models
             firebaseClient.Child(nameof(Usuario) + "/" + student.IdUser).PutAsync(JsonConvert.SerializeObject(student));
             return true;
         }
+
+
         public async Task<bool> Delete(string id)
         {
             await firebaseClient.Child(nameof(Usuario) + "/" + id).DeleteAsync();

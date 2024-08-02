@@ -36,6 +36,8 @@ namespace Base2
             string Phone = txtPhone.Text;
             string Address = txtAddress.Text;
             string City = txtCity.Text;
+            DateTime BirthDate = datePickerDOB.Date;
+            string Gender = pickerGender.SelectedItem?.ToString();
 
             // Validación de campos
             if (string.IsNullOrEmpty(FirstName) ||
@@ -44,7 +46,8 @@ namespace Base2
                 string.IsNullOrEmpty(Password) ||
                 string.IsNullOrEmpty(Phone) ||
                 string.IsNullOrEmpty(Address) ||
-                string.IsNullOrEmpty(City))
+                string.IsNullOrEmpty(City) ||
+                string.IsNullOrEmpty(Gender))
             {
                 await DisplayAlert("Registro", "Por favor llene todos los campos", "OK");
                 return;
@@ -62,19 +65,25 @@ namespace Base2
                 return;
             }
 
+            // Calcular la edad
+            int age = CalculateAge(BirthDate);
+
             // Todos los campos están llenos y válidos, guardar en la base de datos
             try
             {
                 var newUser = new Usuario
                 {
-                    FirstName = txtFirstName.Text,
-                    LastName = txtLastName.Text,
-                    Email = txtEmail.Text,
-                    Password = txtPassword.Text,
-                    Phone = txtPhone.Text,
-                    Address = txtAddress.Text,
-                    City = txtCity.Text,
-                    //Image = imageEntry.Text, // Asume que tienes una entrada para la URL o el path de la imagen
+                    FirstName = FirstName,
+                    LastName = LastName,
+                    Email = Email,
+                    Password = Password,
+                    Phone = Phone,
+                    Address = Address,
+                    City = City,
+                    Genero = Gender,
+                    FechaNacimiento = BirthDate,
+                    Edad = age,
+                    FotoPerfil = string.Empty,
                     IdRol = 2 // Asigna el ID del rol "Padre"
                 };
 
@@ -93,6 +102,14 @@ namespace Base2
             {
                 await DisplayAlert("Error", "Ocurrió un error: " + ex.Message, "OK");
             }
+        }
+
+        private int CalculateAge(DateTime birthDate)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - birthDate.Year;
+            if (birthDate.Date > today.AddYears(-age)) age--;
+            return age;
         }
     }
 }

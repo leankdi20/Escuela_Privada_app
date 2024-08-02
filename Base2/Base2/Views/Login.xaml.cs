@@ -52,6 +52,7 @@ namespace Base2
                     return;
                 }
 
+                Console.WriteLine($"Intentando autenticar usuario: {email}");
                 var user = await userRepo.AuthenticateUser(email, Pass);
 
                 if (user != null)
@@ -63,10 +64,19 @@ namespace Base2
                     txtemail.Text = "";
                     txtPass.Text = "";
 
+                    // Guardar datos en SessionData
+                    SessionData.IdUser = user.IdUser;
                     SessionData.UserName = user.FirstName;
                     SessionData.Email = user.Email;
+                    SessionData.Genero = user.Genero;
+                    SessionData.Phone = user.Phone;
+                    SessionData.Address = user.Address;
+                    SessionData.City = user.City;
+                    SessionData.FotoPerfil = user.FotoPerfil;
+                    SessionData.FechaNacimiento = user.FechaNacimiento;
+                    SessionData.Edad = user.Edad;
 
-                    // Llevar al menú principal
+                    // Navegar al menú principal
                     await Navigation.PushAsync(new MenuPrincipal());
                 }
                 else
@@ -79,5 +89,7 @@ namespace Base2
                 await DisplayAlert("Login", ex.Message, "OK");
             }
         }
+
+
     }
 }

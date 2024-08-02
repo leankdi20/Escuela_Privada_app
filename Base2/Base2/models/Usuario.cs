@@ -43,6 +43,9 @@ namespace Base2
         [MaxLength(50)]
         public int Edad { get; set; }
 
+        [MaxLength(50)]
+        public String Genero { get; set; }
+
         // Propiedad para la FK
         public int IdRol { get; set; }
 
