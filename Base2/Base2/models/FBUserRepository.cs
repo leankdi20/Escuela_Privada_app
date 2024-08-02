@@ -134,6 +134,7 @@ namespace Base2.models
                     Edad = item.Object.Edad,
                     Genero = item.Object.Genero,
                     IdRol = item.Object.IdRol
+
                 }).ToList();
 
                 Console.WriteLine("Cantidad de usuarios obtenidos: " + usuarios.Count);
@@ -151,11 +152,16 @@ namespace Base2.models
         {
             try
             {
-                var user = await firebaseClient.Child(nameof(Usuario) + "/" + id).OnceSingleAsync<Usuario>();
-                if (user == null)
+                var user = await firebaseClient
+                    .Child(nameof(Usuario))
+                    .Child(id)
+                    .OnceSingleAsync<Usuario>();
+
+                if (user != null)
                 {
-                    Console.WriteLine($"Usuario con Id: {id} no encontrado.");
+                    user.IdUser = id;  // Asigna el ID manualmente al objeto Usuario
                 }
+
                 return user;
             }
             catch (Exception ex)
@@ -170,12 +176,29 @@ namespace Base2.models
         {
             try
             {
-                await firebaseClient.Child(nameof(Usuario) + "/" + user.IdUser).PutAsync(JsonConvert.SerializeObject(user));
+                // Verificar que el ID del usuario no es nulo o vacío
+                if (string.IsNullOrEmpty(user.IdUser))
+                {
+                    Console.WriteLine("Error: El ID de usuario está vacío.");
+                    return false;
+                }
+
+                // Depuración: Mostrar información sobre el usuario antes de actualizar
+                Console.WriteLine($"Actualizando usuario con ID: {user.IdUser}");
+                Console.WriteLine($"Nuevos datos: Address={user.Address}, Phone={user.Phone}");
+
+                // Intentar actualizar en Firebase
+                await firebaseClient
+                    .Child(nameof(Usuario))
+                    .Child(user.IdUser)
+                    .PutAsync(JsonConvert.SerializeObject(user));
+
+                Console.WriteLine("Actualización exitosa.");
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating user: {ex.Message}");
+                Console.WriteLine($"Error al actualizar el usuario: {ex.Message}");
                 return false;
             }
         }

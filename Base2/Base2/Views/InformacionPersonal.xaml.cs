@@ -20,10 +20,12 @@ namespace Base2.Views
         public InformacionPersonal()
         {
             InitializeComponent();
-            btnEditarFoto.Clicked += BtnEditarFoto_Clicked;
-            btnGuardarFoto.Clicked += BtnGuardarFoto_Clicked;
-
             userRepo = new FBUserRepository();
+            btnEditarDatos.Clicked += BtnEditarDatos_Clicked;
+          
+            btnEditarFoto.Clicked += BtnEditarFoto_Clicked;
+            CargarDatosUsuario();
+            
 
             if (SessionData.UserName != null)
                 txtNombre.Text = SessionData.UserName;
@@ -40,9 +42,11 @@ namespace Base2.Views
             if (SessionData.FechaNacimiento != null)
                 txtFechaNacimiento.Text = SessionData.FechaNacimiento.Value.ToString("dd/MM/yyyy");
 
-            
+          
 
-           // ProfileImage.Source = ImageSource.FromFile(SessionData.FotoPerfil);
+
+
+            // ProfileImage.Source = ImageSource.FromFile(SessionData.FotoPerfil);
             if (!string.IsNullOrEmpty(SessionData.FotoPerfil))
             {
                 ProfileImage.Source = ImageSource.FromFile(SessionData.FotoPerfil);
@@ -50,42 +54,87 @@ namespace Base2.Views
 
         }
 
-        private async void BtnEditarFoto_Clicked(object sender, EventArgs e)
+        //private async void BtnEditarFoto_Clicked(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+        //        {
+        //            Title = "Seleccione una foto"
+        //        });
+
+        //        if (result != null)
+        //        {
+        //            // Guarda la ruta de la imagen seleccionada en una variable de sesión
+        //            filePath = result.FullPath;
+
+        //            // Mostrar la foto en la vista actual
+        //            ProfileImage.Source = ImageSource.FromFile(result.FullPath);
+
+        //            // Obtener el usuario actual de la base de datos
+        //            var user = await userRepo.GetUserById(SessionData.IdUser);
+
+        //            if (user != null)
+        //            {
+        //                // Actualizar solo la foto de perfil
+        //                user.FotoPerfil = filePath;
+
+        //                // Actualizar el usuario en la base de datos
+        //                bool isUpdated = await userRepo.UpdateUser(user);
+        //                if (isUpdated)
+        //                {
+        //                    await DisplayAlert("Success", "Foto de perfil actualizada exitosamente", "OK");
+        //                }
+        //                else
+        //                {
+        //                    await DisplayAlert("Error", "No se pudo actualizar la foto de perfil", "OK");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                await DisplayAlert("Error", "Usuario no encontrado", "OK");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            await DisplayAlert("Error", "No se ha seleccionado ninguna foto", "OK");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await DisplayAlert("Error", $"Ocurrió un error al seleccionar la foto: {ex.Message}", "OK");
+        //    }
+        //}
+
+        private async void CargarDatosUsuario()
         {
-            try
+
+            var user = await userRepo.GetUserById(SessionData.IdUser);
+
+            if (user != null)
             {
-                var result = await MediaPicker.PickPhotoAsync();
-                if (result != null)
+                // Asignar los datos del usuario a los campos de la interfaz
+
+                if (!string.IsNullOrEmpty(user.FotoPerfil))
                 {
-                    var stream = await result.OpenReadAsync();
-                    filePath = Path.Combine(FileSystem.CacheDirectory, result.FileName);
-
-                    using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-                    {
-                        await stream.CopyToAsync(fileStream);
-                    }
-
-                    // Actualizar la imagen en la UI
-                    ProfileImage.Source = ImageSource.FromFile(filePath);
-                    SessionData.FotoPerfil = filePath;  // Actualizar la sesión con la nueva ruta de la foto
-                    Console.WriteLine($"Foto seleccionada: {filePath}");  // Mensaje de depuración
+                    ProfileImage.Source = ImageSource.FromFile(user.FotoPerfil);
                 }
+
+
             }
-            catch (FeatureNotSupportedException fnsEx)
+            else
             {
-                await DisplayAlert("Error", "This device does not support photo picking.", "OK");
-            }
-            catch (PermissionException pEx)
-            {
-                await DisplayAlert("Error", "Permission to access photos was denied.", "OK");
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+                await DisplayAlert("Error", "No se pudieron cargar los datos del usuario.", "OK");
             }
         }
 
-        private async void BtnGuardarFoto_Clicked(object sender, EventArgs e)
+
+        private async void BtnEditarDatos_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditarDatos());
+        }
+
+        private async void BtnEditarFoto_Clicked(object sender, EventArgs e)
         {
             try
             {

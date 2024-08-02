@@ -38,7 +38,7 @@
                            Grid.Column="0"/>
                         
                         <!-- Boton editar foto -->
-                        <ImageButton Source="editar.png" 
+                        <ImageButton Source="editar_datos.png" 
                                  BackgroundColor="Transparent"
                                  HeightRequest="40"
                                  WidthRequest="40"
@@ -46,7 +46,7 @@
                                  VerticalOptions="Center"
                                  Margin="0,0,15,0"
                                  Grid.Column="1"
-                                 x:Name="btnEditarFoto"/>
+                                 x:Name="btnEditarDatos"/>
                     </Grid>
                 </Frame>
             </StackLayout>
@@ -55,15 +55,32 @@
 
             <StackLayout Padding="20" Spacing="5" Margin="0,-10,0,0"  >
                 <!-- Perfil del Usuario -->
-                <Frame CornerRadius="20" Padding="10" BackgroundColor="White" HasShadow="True" HeightRequest="400" Margin="20,0,20,0">
+                <Frame CornerRadius="20" Padding="5" BackgroundColor="White" HasShadow="True" HeightRequest="440" Margin="20,0,20,0">
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-                        <Frame CornerRadius="50" HeightRequest="300" WidthRequest="100" Margin="50,0,50,0" Padding="0" IsClippedToBounds="True"   >
-                            <Image x:Name="ProfileImage" Source="FotoPadre.png" HeightRequest="100" WidthRequest="80" Aspect="Fill"
-                                  Margin="0,-20,0,0" />
-                        </Frame>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame CornerRadius="50" HeightRequest="300" WidthRequest="100" Margin="50,10,20,0" Padding="0" IsClippedToBounds="True"  Grid.Column="0" >
+                                <Image x:Name="ProfileImage" Source="FotoPadre.png" HeightRequest="100" WidthRequest="80" Aspect="Fill"
+                                      Margin="-10,0,-10,0" />
+                            </Frame>
+                            <!-- Boton editar foto -->
+                            <ImageButton Source="editar.png" 
+                                     BackgroundColor="Transparent"
+                                     HeightRequest="70"
+                                     WidthRequest="35"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="Center"
+                                     Margin="0,-150,0,0"
+                                     Grid.Column="1"
+                                     x:Name="btnEditarFoto"/>
+                        </Grid>
                         
-                        <Button Text="Guardar Foto" x:Name="btnGuardarFoto" HeightRequest="40" WidthRequest="20" Padding="10" Margin="50,0,50,0"/>
+
                         
                         <Label Text="Ricardo Joseph" 
                                x:Name="txtNombre"
@@ -79,20 +96,22 @@
                                x:Name="txtEmail"/>
 
                         <!-- Grid para Fecha de Nacimiento, Edad y Sexo -->
-                        <Grid Margin="10,20,0,0">
+                        <Grid Margin="10,10,0,20" HeightRequest="60">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="Fecha de Nacimiento" HorizontalOptions="Center" TextColor="Black" Grid.Column="0" />
+                            <!-- Header -->
+                            <Label Text="F. de Nac." HorizontalOptions="Center" TextColor="Black" Grid.Column="0" />
                             <Label Text="Edad" HorizontalOptions="Center" TextColor="Black" Grid.Column="1" />
                             <Label Text="Genero" HorizontalOptions="Center" TextColor="Black" Grid.Column="2" />
 
+                            <!-- Data -->
                             <Label Text="20/03/1991" x:Name="txtFechaNacimiento" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="0" />
-                            <Label Text="33" x:Name="txtEdad" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="1" />
-                            <Label Text="Masculino" x:Name="txtGenero" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="2" />
+                            <Label Text="33" x:Name="txtEdad" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="1"  />
+                            <Label Text="Masculino" x:Name="txtGenero" HorizontalOptions="Center" TextColor="Black" Grid.Row="1" Grid.Column="2"  />
                         </Grid>
                     </StackLayout>
                 </Frame>
