@@ -9,28 +9,50 @@ namespace Base2.models
     public class Estudiante
     {
         [PrimaryKey, AutoIncrement]
-        public int IdEstudiante { get; set; }
+        public String IdEstudiante { get; set; }
 
         [MaxLength(50)]
-        public string FirstName { get; set; }
+        public String FirstName { get; set; }
 
         [MaxLength(50)]
-        public string LastName { get; set; }
+        public String LastName { get; set; }
 
         [MaxLength(10)]
         public DateTime FechaNacimiento { get; set; }
 
+        [MaxLength(50)]
+        public String Cedula { get; set; }
+
         [MaxLength(100)]
-        public string Address { get; set; }
+        public String Address { get; set; }
 
         [MaxLength(50)]
-        public string City { get; set; }
+        public String City { get; set; }
+
+        [MaxLength(50)]
+        public String Genero { get; set; }
+
+        [MaxLength(500)]
+        public String FotoPerfil { get; set; }
+
+        [MaxLength(100)]
+        public string Enfermedad { get; set; }
+
+        [MaxLength(100)]
+        public string NombreMedicina { get; set; }
+
+        [MaxLength(500)]
+        public string Descripcion { get; set; }
+
+        [MaxLength(100)]
+        public string Alergia { get; set; }
 
         //propiedad para la FK
-        public int IdUser { get; set; }
+        public String IdUser { get; set; }
 
         [Ignore]
         public Usuario Usuario { get; set; }
-       
+        // Relación con Medicinas
+
     }
 }

@@ -16,7 +16,7 @@ namespace Base2.models
 {
     public class FBUserRepository
     {
-    
+
         FirebaseClient firebaseClient = new FirebaseClient("https://escuelaprivada-856f0-default-rtdb.firebaseio.com/");
 
 
@@ -236,5 +236,70 @@ namespace Base2.models
             return (await firebaseClient.Child(nameof(Usuario) + "/" + id).OnceSingleAsync<Usuario>());
         }
 
+
+
+
+
+        // Método para guardar un Estudiante
+        public async Task<bool> SaveEstudiante(Estudiante estudiante)
+        {
+            try
+            {
+                // Inicializar FotoPerfil como cadena vacía si no está inicializado
+                if (string.IsNullOrEmpty(estudiante.FotoPerfil))
+                {
+                    estudiante.FotoPerfil = string.Empty;
+                }
+
+                var data = await firebaseClient.Child(nameof(Estudiante)).PostAsync(JsonConvert.SerializeObject(estudiante));
+                if (!string.IsNullOrEmpty(data.Key))
+                {
+                    estudiante.IdEstudiante = data.Key;  // Asignar la clave generada al estudiante
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving student: {ex.Message}");
+                return false;
+            }
+        }
+
+
+        // Método para obtener todos los estudiantes asociados a un usuario
+        public async Task<List<Estudiante>> GetEstudiantesByUserId(string userId)
+        {
+            try
+            {
+                var estudiantes = (await firebaseClient.Child(nameof(Estudiante)).OnceAsync<Estudiante>())
+                    .Select(item => new Estudiante
+                    {
+                        IdEstudiante = item.Key, // IdEstudiante es string
+                        FirstName = item.Object.FirstName,
+                        LastName = item.Object.LastName,
+                        FechaNacimiento = item.Object.FechaNacimiento,
+                        Cedula = item.Object.Cedula,
+                        Address = item.Object.Address,
+                        City = item.Object.City,
+                        Genero = item.Object.Genero,
+                        FotoPerfil = item.Object.FotoPerfil,
+                        Enfermedad = item.Object.Enfermedad,
+                        NombreMedicina = item.Object.NombreMedicina,
+                        Descripcion = item.Object.Descripcion,
+                        Alergia = item.Object.Alergia,
+                        IdUser = item.Object.IdUser
+                    })
+                    .Where(e => e.IdUser.ToString() == userId) // Asegúrate que la comparación es adecuada
+                    .ToList();
+
+                return estudiantes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener estudiantes: {ex.Message}");
+                return new List<Estudiante>();
+            }
+        }
     }
 }

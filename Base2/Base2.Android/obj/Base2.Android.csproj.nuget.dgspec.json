@@ -111,7 +111,7 @@
           "dependencies": {
             "FirebaseAuthentication.net": {
               "target": "Package",
-              "version": "[3.7.2, )"
+              "version": "[4.1.0, )"
             },
             "FirebaseDatabase.net": {
               "target": "Package",

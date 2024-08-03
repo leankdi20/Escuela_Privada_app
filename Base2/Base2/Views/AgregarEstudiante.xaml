@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="Base2.Views.AgregarEstudiante">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#202020">
+            <!-- Título -->
+            <StackLayout Margin="20,10,20,0">
+                <Label Text="Agregar Estudiante" FontSize="30" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+            </StackLayout>
+
+            <ScrollView>
+                <StackLayout Padding="20">
+
+                    <!-- Sección: Datos Personales -->
+                    <Label Text="Datos Personales" FontSize="Large" TextColor="White" Margin="0,10,0,5"/>
+                    <Frame BackgroundColor="#FF5252" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtFirstName" Placeholder="Nombre" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#FF4081" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtLastName" Placeholder="Apellido" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#7C4DFF" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <DatePicker x:Name="datePickerDOB" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#FF4081" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtCedula" Placeholder="Cedula" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <!-- Sección: Dirección -->
+                    <Label Text="Dirección" FontSize="Large" TextColor="White" Margin="0,10,0,5"/>
+                    <Frame BackgroundColor="#536DFE" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtAddress" Placeholder="Dirección" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#448AFF" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtCity" Placeholder="Ciudad" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+
+
+                    <Frame BackgroundColor="#009688" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Picker x:Name="pickerGender" Title="Género" SelectedIndex="0" TextColor="White">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Masculino</x:String>
+                                    <x:String>Femenino</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </Frame>
+                    <!-- Sección: Enfermedad y Medicina -->
+                    <Label Text="Información Médica" FontSize="Large" TextColor="White" Margin="0,10,0,5"/>
+
+                    <Frame BackgroundColor="#443913" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtEnfermedad" Placeholder="Enfermedad" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#4CAF50" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtNombreMedicina" Placeholder="Medicina" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#8BC34A" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtDescripcion" Placeholder="Descripción de la Medicina" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+                    <Frame BackgroundColor="#FF9800" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Entry x:Name="txtAlergia" Placeholder="Alergias" PlaceholderColor="White" TextColor="White" />
+                    </Frame>
+
+                    <!-- Sección: Foto de Perfil -->
+                    <Label Text="Foto de Perfil" FontSize="Large" TextColor="White" Margin="0,10,0,5"/>
+                    <Frame BackgroundColor="#795548" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <ImageButton Source="cargarFoto.png" HeightRequest="80" x:Name="btnOnSelectPhoto" />
+                    </Frame>
+                    <Frame BackgroundColor="#FFC107" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Image x:Name="ProfileImage" HeightRequest="200" WidthRequest="100" Aspect="AspectFit" />
+                    </Frame>
+
+                    <!-- Botón para Guardar -->
+                    <Frame BackgroundColor="#009688" CornerRadius="10" Padding="10" Margin="0,5,0,15">
+                        <Button Text="Guardar Estudiante" x:Name="btnGuardarEstudiante" TextColor="White" BackgroundColor="Transparent" />
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -138,7 +138,13 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Label Text="Agregar alumno" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
-                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                            <ImageButton Source="right_arrow.png" 
+                                         HeightRequest="20"
+                                         WidthRequest="20" 
+                                         HorizontalOptions="End"
+                                         VerticalOptions="Center"
+                                         Grid.Column="1"
+                                         x:Name="btnAgregarEstudiante"/>
                         </Grid>
                     </Frame>
 

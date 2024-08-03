@@ -2,17 +2,20 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "FirebaseAuthentication.net/3.7.2": {
+      "FirebaseAuthentication.net/4.1.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.2"
         },
         "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseDatabase.net/4.2.0": {
@@ -64,7 +67,7 @@
       "Microsoft.NETCore.Jit/2.0.8": {
         "type": "package"
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -381,7 +384,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
@@ -399,17 +402,20 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "FirebaseAuthentication.net/3.7.2": {
+      "FirebaseAuthentication.net/4.1.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.2"
         },
         "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseDatabase.net/4.2.0": {
@@ -461,7 +467,7 @@
       "Microsoft.NETCore.Jit/2.0.8": {
         "type": "package"
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -778,7 +784,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
@@ -796,17 +802,20 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-arm64": {
-      "FirebaseAuthentication.net/3.7.2": {
+      "FirebaseAuthentication.net/4.1.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.2"
         },
         "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseDatabase.net/4.2.0": {
@@ -861,7 +870,7 @@
           "runtime.win-arm64.Microsoft.NETCore.Jit": "2.0.8"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -1184,7 +1193,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
@@ -1202,17 +1211,20 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "FirebaseAuthentication.net/3.7.2": {
+      "FirebaseAuthentication.net/4.1.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.2"
         },
         "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseDatabase.net/4.2.0": {
@@ -1267,7 +1279,7 @@
           "runtime.win-x64.Microsoft.NETCore.Jit": "2.0.8"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -1590,7 +1602,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
@@ -1608,17 +1620,20 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "FirebaseAuthentication.net/3.7.2": {
+      "FirebaseAuthentication.net/4.1.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "11.0.2"
+          "Newtonsoft.Json": "13.0.2"
         },
         "compile": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard1.1/Firebase.Auth.dll": {}
+          "lib/netstandard2.0/Firebase.Auth.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FirebaseDatabase.net/4.2.0": {
@@ -1673,7 +1688,7 @@
           "runtime.win-x86.Microsoft.NETCore.Jit": "2.0.8"
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -1996,7 +2011,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
@@ -2015,16 +2030,20 @@
     }
   },
   "libraries": {
-    "FirebaseAuthentication.net/3.7.2": {
-      "sha512": "d0Zc0tiE7NutI/jMX/T81LU/rX3HVBH8vtvKTbIeN6BCIQ+wipstz7tm5MnIgAeh4ehqCHTiVuMOHztqfCVCBQ==",
+    "FirebaseAuthentication.net/4.1.0": {
+      "sha512": "pShi5v9cvT5bUWZDm261lO4uxJHvzOvpj46YHrL3uCB1WBeyCIcpoVakAQ2xHTu1dpmV86/BzSNRpqIGNp860g==",
       "type": "package",
-      "path": "firebaseauthentication.net/3.7.2",
+      "path": "firebaseauthentication.net/4.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "firebaseauthentication.net.3.7.2.nupkg.sha512",
+        "LICENSE.txt",
+        "README.md",
+        "firebase.png",
+        "firebaseauthentication.net.4.1.0.nupkg.sha512",
         "firebaseauthentication.net.nuspec",
-        "lib/netstandard1.1/Firebase.Auth.dll"
+        "lib/netstandard2.0/Firebase.Auth.dll",
+        "lib/netstandard2.0/Firebase.Auth.xml"
       ]
     },
     "FirebaseDatabase.net/4.2.0": {
@@ -2144,14 +2163,15 @@
         "version.txt"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+    "Newtonsoft.Json/13.0.2": {
+      "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.1",
+      "path": "newtonsoft.json/13.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
+        "README.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -2160,13 +2180,15 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.13.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
