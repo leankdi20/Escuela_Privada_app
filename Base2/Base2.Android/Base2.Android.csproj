@@ -122,6 +122,14 @@
     <AndroidResource Include="Resources\drawable\editar.png" />
     <AndroidResource Include="Resources\drawable\editar_datos.png" />
     <AndroidResource Include="Resources\drawable\cargarFoto.png" />
+    <AndroidResource Include="Resources\drawable\btnEstudiante.png" />
+    <AndroidResource Include="Resources\drawable\calificaciones.png" />
+    <AndroidResource Include="Resources\drawable\lista_alumno.png" />
+    <AndroidResource Include="Resources\drawable\PruebaImagen.jpg" />
+    <AndroidResource Include="Resources\drawable\ImgPerfilHombre.jpg" />
+    <AndroidResource Include="Resources\drawable\ImgPerfilMujer.png" />
+    <AndroidResource Include="Resources\drawable\ImgPerfilNina.jpg" />
+    <AndroidResource Include="Resources\drawable\ImgPerfilNino.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

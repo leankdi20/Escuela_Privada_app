@@ -9,6 +9,10 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Firebase.Storage;
+
+
+
 namespace Base2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -23,8 +27,9 @@ namespace Base2.Views
             userRepo = new FBUserRepository();
             btnEditarDatos.Clicked += BtnEditarDatos_Clicked;
             
-            btnEditarFoto.Clicked += BtnEditarFoto_Clicked;
-            btnAgregarEstudiante.Clicked += BtnAgregarEstudiante_Clicked; 
+
+            btnAgregarEstudiante.Clicked += BtnAgregarEstudiante_Clicked;
+            btnListado.Clicked += BtnListado_Clicked;
 
             CargarDatosUsuario();
             
@@ -44,10 +49,6 @@ namespace Base2.Views
             if (SessionData.FechaNacimiento != null)
                 txtFechaNacimiento.Text = SessionData.FechaNacimiento.Value.ToString("dd/MM/yyyy");
 
-          
-
-
-
             // ProfileImage.Source = ImageSource.FromFile(SessionData.FotoPerfil);
             if (!string.IsNullOrEmpty(SessionData.FotoPerfil))
             {
@@ -56,66 +57,22 @@ namespace Base2.Views
 
         }
 
+        private async void BtnListado_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MostrarEstudiantePage());
+        }
+
         private async void BtnAgregarEstudiante_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AgregarEstudiante());
         }
 
-        private async void BtnEditarFoto_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-                {
-                    Title = "Seleccione una foto"
-                });
 
-                if (result != null)
-                {
-                    // Guarda la ruta de la imagen seleccionada en una variable de sesión
-                    filePath = result.FullPath;
 
-                    // Mostrar la foto en la vista actual
-                    ProfileImage.Source = ImageSource.FromFile(result.FullPath);
 
-                    // Obtener el usuario actual de la base de datos
-                    var user = await userRepo.GetUserById(SessionData.IdUser);
-
-                    if (user != null)
-                    {
-                        // Actualizar solo la foto de perfil
-                        user.FotoPerfil = filePath;
-
-                        // Actualizar el usuario en la base de datos
-                        bool isUpdated = await userRepo.UpdateUser(user);
-                        if (isUpdated)
-                        {
-                            await DisplayAlert("Success", "Foto de perfil actualizada exitosamente", "OK");
-                        }
-                        else
-                        {
-                            await DisplayAlert("Error", "No se pudo actualizar la foto de perfil", "OK");
-                        }
-                    }
-                    else
-                    {
-                        await DisplayAlert("Error", "Usuario no encontrado", "OK");
-                    }
-                }
-                else
-                {
-                    await DisplayAlert("Error", "No se ha seleccionado ninguna foto", "OK");
-                }
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", $"Ocurrió un error al seleccionar la foto: {ex.Message}", "OK");
-            }
-        }
 
         private async void CargarDatosUsuario()
         {
-
             var user = await userRepo.GetUserById(SessionData.IdUser);
 
             if (user != null)
@@ -124,16 +81,24 @@ namespace Base2.Views
 
                 if (!string.IsNullOrEmpty(user.FotoPerfil))
                 {
+                    // Aquí asumes que FotoPerfil contiene una ruta de archivo local o una imagen de recurso
                     ProfileImage.Source = ImageSource.FromFile(user.FotoPerfil);
                 }
-
-
+                else
+                {
+                    // Si no hay foto de perfil, asigna la imagen predeterminada basada en el género del usuario
+                    ProfileImage.Source = user.Genero == "Masculino" ? "ImgPerfilHombre.jpg" : "ImgPerfilMujer.png";
+                }
             }
             else
             {
                 await DisplayAlert("Error", "No se pudieron cargar los datos del usuario.", "OK");
+                // En caso de que no se pueda cargar el usuario, también puedes asignar una imagen predeterminada
+                ProfileImage.Source = "defaultProfilePicture.jpg"; // Recurso de imagen predeterminada
             }
         }
+
+
 
 
         private async void BtnEditarDatos_Clicked(object sender, EventArgs e)
@@ -141,46 +106,7 @@ namespace Base2.Views
             await Navigation.PushAsync(new EditarDatos());
         }
 
-        //private async void BtnEditarFoto_Clicked(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        Console.WriteLine($"Intentando guardar foto: {filePath}");  // Mensaje de depuración
-        //        if (!string.IsNullOrEmpty(filePath))
-        //        {
-        //            // Obtener el usuario actual de la base de datos
-        //            var user = await userRepo.GetUserById(SessionData.IdUser);
-        //            if (user != null)
-        //            {
-        //                // Mantener el IdUser y actualizar solo la foto de perfil
-        //                user.FotoPerfil = filePath;
-
-        //                // Actualizar el usuario en la base de datos
-        //                bool isUpdated = await userRepo.UpdateUser(user);
-        //                if (isUpdated)
-        //                {
-        //                    await DisplayAlert("Success", "Foto de perfil actualizada exitosamente", "OK");
-        //                }
-        //                else
-        //                {
-        //                    await DisplayAlert("Error", "No se pudo actualizar la foto de perfil", "OK");
-        //                }
-        //            }
-        //            else
-        //            {
-        //                await DisplayAlert("Error", "Usuario no encontrado", "OK");
-        //            }
-        //        }
-        //        else
-        //        {
-        //            await DisplayAlert("Error", "No se ha seleccionado ninguna foto", "OK");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
-        //    }
-        //}
+        
 
 
 

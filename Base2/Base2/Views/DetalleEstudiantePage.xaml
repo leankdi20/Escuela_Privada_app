@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.DetalleEstudiantePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20">
+                <Label Text="{Binding FirstName}" FontSize="24" />
+                <Label Text="{Binding LastName}" FontSize="24" />
+                <Label Text="{Binding Cedula}" FontSize="18" />
+                <Label Text="{Binding City}" FontSize="18" />
+                <Label Text="{Binding Enfermedad}" FontSize="18" />
+                <Label Text="{Binding NombreMedicina}" FontSize="18" />
+                <Label Text="{Binding Descripcion}" FontSize="18" />
+                <Label Text="{Binding Alergia}" FontSize="18" />
+                <Image Source="{Binding FotoPerfil}" HeightRequest="300" Aspect="AspectFill" />
+                <!-- Agrega más campos según sea necesario -->
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

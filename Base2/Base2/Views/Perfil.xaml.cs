@@ -22,7 +22,13 @@ namespace Base2
             btnInfoPersonal.Clicked += BtnInfoPersonal_Clicked;
             btnNotificaciones.Clicked += BtnNotificaciones_Clicked;
             btnCerrar.Clicked += BtnCerrar_Clicked;
+            btnAyuda.Clicked += BtnAyuda_Clicked;
 		}
+
+        private async void BtnAyuda_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Ayuda());
+        }
 
         private void BtnCerrar_Clicked(object sender, EventArgs e)
         {

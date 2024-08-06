@@ -37,7 +37,7 @@
                            VerticalOptions="Center"
                            Grid.Column="0"/>
                         
-                        <!-- Boton editar foto -->
+                        <!-- Boton editar datos -->
                         <ImageButton Source="editar_datos.png" 
                                  BackgroundColor="Transparent"
                                  HeightRequest="40"
@@ -64,20 +64,11 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <Frame CornerRadius="50" HeightRequest="300" WidthRequest="100" Margin="50,10,20,0" Padding="0" IsClippedToBounds="True"  Grid.Column="0" >
-                                <Image x:Name="ProfileImage" Source="FotoPadre.png" HeightRequest="100" WidthRequest="80" Aspect="Fill"
+                            <Frame CornerRadius="50" HeightRequest="340" WidthRequest="100" Margin="20,5,20,0" Padding="0" IsClippedToBounds="True"  Grid.Column="0" >
+                                <Image x:Name="ProfileImage" Source="FotoPadre.png" HeightRequest="100" WidthRequest="80" Aspect="AspectFill"
                                       Margin="-10,0,-10,0" />
                             </Frame>
-                            <!-- Boton editar foto -->
-                            <ImageButton Source="editar.png" 
-                                     BackgroundColor="Transparent"
-                                     HeightRequest="70"
-                                     WidthRequest="35"
-                                     HorizontalOptions="End"
-                                     VerticalOptions="Center"
-                                     Margin="0,-150,0,0"
-                                     Grid.Column="1"
-                                     x:Name="btnEditarFoto"/>
+
                         </Grid>
                         
 
@@ -138,11 +129,13 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Label Text="Agregar alumno" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
-                            <ImageButton Source="right_arrow.png" 
-                                         HeightRequest="20"
-                                         WidthRequest="20" 
+                            <ImageButton Source="btnEstudiante.png"
+                                         HeightRequest="50"
+                                         WidthRequest="50" 
+                                         Aspect="AspectFill"
                                          HorizontalOptions="End"
                                          VerticalOptions="Center"
+                                         BackgroundColor="Transparent"
                                          Grid.Column="1"
                                          x:Name="btnAgregarEstudiante"/>
                         </Grid>
@@ -156,7 +149,15 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Label Text="Lista de alumno" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
-                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                            <ImageButton Source="lista_alumno.png" 
+                                         HeightRequest="50"
+                                         WidthRequest="50" 
+                                         Aspect="AspectFill"
+                                         HorizontalOptions="End" 
+                                         VerticalOptions="Center"
+                                         BackgroundColor="Transparent"
+                                         x:Name="btnListado"
+                                         Grid.Column="1"/>
                         </Grid>
                     </Frame>
 
@@ -168,7 +169,15 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <Label Text="Calificaciones" FontSize="16" VerticalOptions="Center" TextColor="Black" Grid.Column="0"/>
-                            <ImageButton Source="right_arrow.png" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1"/>
+                            <ImageButton Source="calificaciones.png" 
+                                         HeightRequest="50"
+                                         WidthRequest="50" 
+                                         Aspect="AspectFill"
+                                         HorizontalOptions="End"
+                                         VerticalOptions="Center"
+                                         BackgroundColor="Transparent"
+                                         x:Name="btnCalificaciones"
+                                         Grid.Column="1"/>
                         </Grid>
                     </Frame>
                 </StackLayout>

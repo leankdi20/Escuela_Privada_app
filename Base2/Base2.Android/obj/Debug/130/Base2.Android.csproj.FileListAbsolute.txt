@@ -1436,3 +1436,17 @@ C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\editar.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\editar_datos.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\cargarfoto.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\btnestudiante.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\calificaciones.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\lista_alumno.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\pruebaimagen.jpg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\Firebase.Storage.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\System.Collections.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\System.Diagnostics.Debug.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\System.IO.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\System.Runtime.Extensions.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\android\assets\System.Threading.Tasks.dll
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilhombre.jpg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilmujer.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilnina.jpg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilnino.jpg

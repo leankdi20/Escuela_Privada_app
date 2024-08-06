@@ -29,30 +29,12 @@ namespace Base2.Views
 
 
             btnGuardarEstudiante.Clicked += BtnGuardarEstudiante_Clicked;
-            btnOnSelectPhoto.Clicked += BtnOnSelectPhoto_Clicked;
+           
+            
         }
 
         //Guardamos la foto
-        private async void BtnOnSelectPhoto_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-                {
-                    Title = "Seleccione una foto"
-                });
 
-                if (result != null)
-                {
-                    filePath = result.FullPath;
-                    ProfileImage.Source = ImageSource.FromFile(result.FullPath);
-                }
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Error", $"Ocurrió un error al seleccionar la foto: {ex.Message}", "OK");
-            }
-        }
 
         private async void BtnGuardarEstudiante_Clicked(object sender, EventArgs e)
         {
@@ -64,8 +46,6 @@ namespace Base2.Views
                     await DisplayAlert("Error", "El ID de usuario no está inicializado.", "Aceptar");
                     return;
                 }
-                // Comprobación de inicialización de SessionData y userRepo
-              
 
                 if (userRepo == null)
                 {
@@ -81,13 +61,6 @@ namespace Base2.Views
                 {
                     await DisplayAlert("Error", "Uno o más campos de entrada no están inicializados.", "Aceptar");
                     return;
-                }
-
-                // Comprobación de inicialización de filePath
-                if (string.IsNullOrEmpty(filePath))
-                {
-                    Console.WriteLine("filePath is null. Asignando valor predeterminado.");
-                    filePath = string.Empty; // O asigna un valor predeterminado si es necesario.
                 }
 
                 // Validamos los campos
@@ -107,6 +80,21 @@ namespace Base2.Views
                     return;
                 }
 
+                // Asignar imagen de perfil basada en el género
+                string selectedGender = pickerGender.SelectedItem.ToString();
+                if (selectedGender == "Niña")
+                {
+                    filePath = "ImgPerfilNiña.jpg";
+                }
+                else if (selectedGender == "Niño")
+                {
+                    filePath = "ImgPerfilNiño.jpg";
+                }
+                else
+                {
+                    filePath = string.Empty; // O alguna imagen predeterminada si es necesario.
+                }
+
                 // Debugging: muestra los valores que estás intentando guardar
                 Console.WriteLine("Intentando guardar el estudiante con los siguientes datos:");
                 Console.WriteLine($"Nombre: {txtFirstName.Text}");
@@ -115,7 +103,7 @@ namespace Base2.Views
                 Console.WriteLine($"Cédula: {txtCedula.Text}");
                 Console.WriteLine($"Dirección: {txtAddress.Text}");
                 Console.WriteLine($"Ciudad: {txtCity.Text}");
-                Console.WriteLine($"Género: {pickerGender.SelectedItem.ToString()}");
+                Console.WriteLine($"Género: {selectedGender}");
                 Console.WriteLine($"FotoPerfil: {filePath}");
                 Console.WriteLine($"Enfermedad: {txtEnfermedad.Text}");
                 Console.WriteLine($"Nombre de Medicina: {txtNombreMedicina.Text}");
@@ -132,7 +120,7 @@ namespace Base2.Views
                     Cedula = txtCedula.Text,
                     Address = txtAddress.Text,
                     City = txtCity.Text,
-                    Genero = pickerGender.SelectedItem.ToString(),
+                    Genero = selectedGender,
                     FotoPerfil = filePath,
                     Enfermedad = txtEnfermedad.Text,
                     NombreMedicina = txtNombreMedicina.Text,

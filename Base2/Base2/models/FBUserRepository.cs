@@ -92,10 +92,10 @@ namespace Base2.models
         {
             try
             {
-                // Inicializar FotoPerfil como cadena vacía si no está inicializado
+                // Asignar imagen de perfil basada en alguna lógica (por ejemplo, género o rol)
                 if (string.IsNullOrEmpty(user.FotoPerfil))
                 {
-                    user.FotoPerfil = string.Empty;
+                    user.FotoPerfil = GetDefaultProfilePicture(user);
                 }
 
                 var data = await firebaseClient.Child(nameof(Usuario)).PostAsync(JsonConvert.SerializeObject(user));
@@ -110,6 +110,23 @@ namespace Base2.models
             {
                 Console.WriteLine($"Error saving user: {ex.Message}");
                 return false;
+            }
+        }
+
+        // Método auxiliar para obtener la imagen de perfil predeterminada
+        private string GetDefaultProfilePicture(Usuario user)
+        {
+            if (user.Genero == "Femenino")
+            {
+                return "ImgPerfilNina.jpg";
+            }
+            else if (user.Genero == "Masculino")
+            {
+                return "ImgPerfilNino.jpg";
+            }
+            else
+            {
+                return "defaultProfilePicture.jpg"; // Imagen predeterminada si no hay género especificado
             }
         }
 
@@ -301,5 +318,6 @@ namespace Base2.models
                 return new List<Estudiante>();
             }
         }
+
     }
 }

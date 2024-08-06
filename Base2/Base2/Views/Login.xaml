@@ -19,9 +19,8 @@
             </StackLayout>
 
 
-            <Label Text="Login" x:Name="lblogin" FontSize="40" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" 
-                   Margin="0,-20,0,0" Padding="20" TextColor="White" />
-            <Frame CornerRadius="70" HeightRequest="130" Padding="0" HasShadow="True" Margin="-90,10,30,0" BackgroundColor="#3c575d">
+            
+            <Frame CornerRadius="70" HeightRequest="130" Padding="0" HasShadow="True" Margin="-90,30,30,0" BackgroundColor="#3c575d">
                 <Grid Padding="8">
  
                     
@@ -65,7 +64,7 @@
 
 
 
-            <Button x:Name="btnMostrarUser" Text="Usuarios" CornerRadius="30" Margin="-60,0,230,20" BackgroundColor="#edcd91" TextColor="#365359"></Button>
+            
             <Button Text="Registrar" CornerRadius="30" Margin="-60,-20,230,0" x:Name="btnRegistrar" BackgroundColor="#edcd91" TextColor="#365359"/>
         </StackLayout>
     </StackLayout>

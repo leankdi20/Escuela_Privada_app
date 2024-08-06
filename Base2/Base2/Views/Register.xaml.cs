@@ -68,6 +68,9 @@ namespace Base2
             // Calcular la edad
             int age = CalculateAge(BirthDate);
 
+            // Determinar la imagen de perfil según el género
+            string profileImage = Gender == "Male" ? "ImgPerfilHombre.jpg" : "ImgPerfilMujer.png";
+
             // Todos los campos están llenos y válidos, guardar en la base de datos
             try
             {
@@ -83,7 +86,7 @@ namespace Base2
                     Genero = Gender,
                     FechaNacimiento = BirthDate,
                     Edad = age,
-                    FotoPerfil = string.Empty,
+                    FotoPerfil = profileImage, // Asigna la imagen de perfil seleccionada
                     IdRol = 2 // Asigna el ID del rol "Padre"
                 };
 

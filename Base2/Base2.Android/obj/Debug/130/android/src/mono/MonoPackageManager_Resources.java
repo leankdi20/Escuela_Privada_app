@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"Base2.dll",
 		"Firebase.Auth.dll",
 		"Firebase.dll",
+		"Firebase.Storage.dll",
 		"FormsViewGroup.dll",
 		"LiteDB.dll",
 		"Newtonsoft.Json.dll",

@@ -36,6 +36,19 @@
           }
         }
       },
+      "FirebaseStorage.net/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        }
+      },
       "LiteDB/5.0.21": {
         "type": "package",
         "dependencies": {
@@ -386,6 +399,7 @@
         "dependencies": {
           "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
+          "FirebaseStorage.net": "1.0.3",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.NETCore.Jit": "2.0.8",
@@ -436,6 +450,19 @@
           }
         }
       },
+      "FirebaseStorage.net/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        }
+      },
       "LiteDB/5.0.21": {
         "type": "package",
         "dependencies": {
@@ -786,6 +813,7 @@
         "dependencies": {
           "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
+          "FirebaseStorage.net": "1.0.3",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.NETCore.Jit": "2.0.8",
@@ -834,6 +862,19 @@
           "lib/netstandard2.0/Firebase.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "FirebaseStorage.net/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
       "LiteDB/5.0.21": {
@@ -1195,6 +1236,7 @@
         "dependencies": {
           "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
+          "FirebaseStorage.net": "1.0.3",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.NETCore.Jit": "2.0.8",
@@ -1243,6 +1285,19 @@
           "lib/netstandard2.0/Firebase.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "FirebaseStorage.net/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
       "LiteDB/5.0.21": {
@@ -1604,6 +1659,7 @@
         "dependencies": {
           "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
+          "FirebaseStorage.net": "1.0.3",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.NETCore.Jit": "2.0.8",
@@ -1652,6 +1708,19 @@
           "lib/netstandard2.0/Firebase.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "FirebaseStorage.net/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Storage.dll": {}
         }
       },
       "LiteDB/5.0.21": {
@@ -2013,6 +2082,7 @@
         "dependencies": {
           "FirebaseAuthentication.net": "4.1.0",
           "FirebaseDatabase.net": "4.2.0",
+          "FirebaseStorage.net": "1.0.3",
           "LiteDB": "5.0.21",
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.NETCore.Jit": "2.0.8",
@@ -2057,6 +2127,18 @@
         "firebasedatabase.net.nuspec",
         "lib/netstandard2.0/Firebase.dll",
         "lib/netstandard2.0/Firebase.xml"
+      ]
+    },
+    "FirebaseStorage.net/1.0.3": {
+      "sha512": "SupDHNUwNqcVwEo/HdFEWAXveQe3fU16q4wrrCxUVwP0a77zaddKp7vo2sHIW56DAsJn/gUfjDK3w0MuBhvzjQ==",
+      "type": "package",
+      "path": "firebasestorage.net/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "firebasestorage.net.1.0.3.nupkg.sha512",
+        "firebasestorage.net.nuspec",
+        "lib/netstandard1.1/Firebase.Storage.dll"
       ]
     },
     "LiteDB/5.0.21": {

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Base2.models;
+using Base2.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -47,7 +48,7 @@ namespace Base2
 
         private async void BtnAdd_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Agregar", "Agregar estudiante", "OK");
+            await Navigation.PushAsync(new AgregarEstudiante());
         }
 
       

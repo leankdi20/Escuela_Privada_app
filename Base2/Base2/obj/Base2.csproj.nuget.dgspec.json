@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "LiteDB": {
               "target": "Package",
               "version": "[5.0.21, )"

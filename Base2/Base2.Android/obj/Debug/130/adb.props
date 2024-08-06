@@ -1,2 +1,2 @@
-AdbTarget=-s XPH0220116006921
+AdbTarget=-s emulator-5554
 AdbOptions=

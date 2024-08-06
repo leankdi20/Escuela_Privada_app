@@ -26,14 +26,10 @@ namespace Base2
             userRepo = new FBUserRepository();
             btnLogin.Clicked += BtnLogin_Clicked;
             btnRegistrar.Clicked += BtnRegistrar_Clicked;
-            btnMostrarUser.Clicked += BtnMostrarUser_Clicked;
+           
 
         }
 
-        private void BtnMostrarUser_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MostrarUsuarios());
-        }
 
         private void BtnRegistrar_Clicked(object sender, EventArgs e)
         {

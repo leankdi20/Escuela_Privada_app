@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.MostrarEstudiantePage"
+             x:Name="MostrarEstudiantePageRoot"
+             Title="Estudiante">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Label Text="Estudiantes" FontSize="24" TextColor="White" HorizontalOptions="Center" />
+                
+            </Grid>
+            
+            <!-- Carrusel de fotos -->
+            <CarouselView x:Name="EstudiantesCarousel"
+              IndicatorView="indicatorView"
+              HeightRequest="500"
+              PeekAreaInsets="10" 
+              CurrentItemChanged="OnCurrentItemChanged">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="20">
+                            <Frame BackgroundColor="#35373A"
+                       CornerRadius="30"
+                       Padding="0"
+                       Scale="0.8"
+                       x:Name="EstudianteFrame">
+                                <Grid Padding="0">
+                                    <!-- Imagen de fondo -->
+                                    <!-- Imagen de fondo como botón -->
+                                    <ImageButton x:Name="btnPerfilEstudiante"
+                                                 Source="{Binding FotoPerfil}"
+                                                 Aspect="AspectFill"
+                                                 HeightRequest="400"
+                                                 Command="{Binding Source={x:Reference MostrarEstudiantePageRoot}, Path=BindingContext.PerfilEstudianteCommand}"
+                                                 CommandParameter="{Binding}" />
+                                    <!-- Footer superpuesto -->
+                                    <Grid VerticalOptions="End"
+                              HeightRequest="100"
+                              BackgroundColor="#65263125">
+                                        <Grid.Background>
+                                            <LinearGradientBrush StartPoint="0,0"
+                                                     EndPoint="0,1">
+                                                <GradientStop Color="#AA263125"
+                                                  Offset="0.0" />
+                                                <GradientStop Color="#AA263125"
+                                                  Offset="1.0" />
+                                            </LinearGradientBrush>
+                                        </Grid.Background>
+                                        <StackLayout VerticalOptions="End"
+                                         Padding="10">
+                                            <Label Text="{Binding FirstName}"
+                                       FontSize="24"
+                                       HorizontalOptions="Center"
+                                       TextColor="White" />
+                                            <Label Text="{Binding LastName}"
+                                       FontSize="18"
+                                       HorizontalOptions="Center"
+                                       TextColor="White" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="indicatorView"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               IndicatorColor="Gray"
+               SelectedIndicatorColor="White" />
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

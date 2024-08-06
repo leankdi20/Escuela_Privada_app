@@ -64,14 +64,7 @@
                         <Entry x:Name="txtAlergia" Placeholder="Alergias" PlaceholderColor="White" TextColor="White" />
                     </Frame>
 
-                    <!-- Sección: Foto de Perfil -->
-                    <Label Text="Foto de Perfil" FontSize="Large" TextColor="White" Margin="0,10,0,5"/>
-                    <Frame BackgroundColor="#795548" CornerRadius="10" Padding="10" Margin="0,5,0,15">
-                        <ImageButton Source="cargarFoto.png" HeightRequest="80" x:Name="btnOnSelectPhoto" />
-                    </Frame>
-                    <Frame BackgroundColor="#FFC107" CornerRadius="10" Padding="10" Margin="0,5,0,15">
-                        <Image x:Name="ProfileImage" HeightRequest="200" WidthRequest="100" Aspect="AspectFit" />
-                    </Frame>
+
 
                     <!-- Botón para Guardar -->
                     <Frame BackgroundColor="#009688" CornerRadius="10" Padding="10" Margin="0,5,0,15">

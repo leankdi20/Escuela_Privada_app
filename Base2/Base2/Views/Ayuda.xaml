@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.Ayuda"
+             Title="Guía de Ayuda">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <!-- Título -->
+                <Label Text="Guía de Ayuda para Usuarios"
+                       FontSize="24"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,10" />
+
+                <!-- Bienvenida -->
+                <Label Text="Bienvenidos a Escuela Privada"
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Margin="0,10" />
+
+                <Label Text="¡Gracias por elegir Escruela Privada! Esta guía está diseñada para ayudarte a navegar por nuestra aplicación y aprovechar al máximo todas sus funciones. Si tienes alguna pregunta o encuentras algún problema, consulta esta guía o contacta con nuestro equipo de soporte."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,10" />
+
+                <!-- Índice -->
+                <Label Text="Índice"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,20,0,10" />
+
+                <Label Text="1. Inicio de Sesión y Registro"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="0,10" />
+                <Label Text="2. Navegación en la App"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="0,5" />
+                <Label Text="3. Gestión de Estudiantes"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="0,5" />
+                <Label Text="   - Ver Estudiantes"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="10,0,0,5" />
+                <Label Text="   - Agregar Estudiantes"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="10,0,0,5" />
+                <Label Text="   - Editar Perfil de Estudiante"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="10,0,0,5" />
+                <Label Text="4. Notificaciones y Mensajes"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="0,5" />
+                <Label Text="5. Soporte y Ayuda"
+                       FontSize="16"
+                       TextColor="Black"
+                       Margin="0,5" />
+
+                <!-- Inicio de Sesión y Registro -->
+                <Label Text="Inicio de Sesión y Registro"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,20,0,10" />
+
+                <Label Text="Registro de Usuario"
+                       FontSize="18"
+                       TextColor="Black"
+                       Margin="0,10,0,5" />
+
+                <Label Text="1. Abre la app y selecciona 'Registrar'."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="2. Completa todos los campos obligatorios, como nombre, correo electrónico, y contraseña."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="3. Pulsa 'Registrar' para completar tu registro."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="4. Recibirás un correo de confirmación. Sigue las instrucciones para activar tu cuenta."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+
+                <Label Text="Inicio de Sesión"
+                       FontSize="18"
+                       TextColor="Black"
+                       Margin="0,20,0,5" />
+
+                <Label Text="1. Abre la app y selecciona 'Iniciar Sesión'."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="2. Introduce tu correo electrónico y contraseña registrados."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="3. Pulsa 'Iniciar Sesión' para acceder a tu cuenta."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+                <Label Text="Si olvidaste tu contraseña, selecciona 'Olvidé mi contraseña' y sigue las instrucciones para restablecerla."
+                       FontSize="14"
+                       TextColor="Black"
+                       Margin="0,0,0,5" />
+
+                <!-- Y así continúas con el resto de secciones... -->
+                <!-- Incrustación del video de YouTube -->
+                <Label Text="Video de Ayuda"
+                       FontSize="20"
+                       TextColor="Black"
+                       Margin="0,20,0,10" />
+
+                <WebView HeightRequest="300">
+                    <WebView.Source>
+                        <HtmlWebViewSource>
+                            <HtmlWebViewSource.Html>
+                                <![CDATA[
+                                <html>
+                                <body style="margin:0; padding:0;">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TXK7v49QwcI" frameborder="0" allowfullscreen></iframe>
+                                </body>
+                                </html>
+                                ]]>
+                            </HtmlWebViewSource.Html>
+                        </HtmlWebViewSource>
+                    </WebView.Source>
+                </WebView>
+
+                <!-- Enlace debajo del video -->
+                <Label Text="Ver en YouTube"
+                       FontSize="18"
+                       TextColor="Blue"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnLabelTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

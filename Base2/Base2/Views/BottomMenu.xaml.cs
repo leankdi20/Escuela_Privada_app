@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Base2.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,7 @@ namespace Base2
             ShowMessage("Información del estudiante");
             await Task.Delay(2000);
             HideMessage();
+            await Navigation.PushAsync(new MostrarEstudiantePage());
         }
 
         private async void BtnHome_Clicked(object sender, EventArgs e)

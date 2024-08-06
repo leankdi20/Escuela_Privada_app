@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PqKXKRpmFJU=",
+  "dgSpecHash": "pnUVskfR0Yk=",
   "success": true,
   "projectFilePath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leanv\\.nuget\\packages\\firebaseauthentication.net\\4.1.0\\firebaseauthentication.net.4.1.0.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\firebasedatabase.net\\4.2.0\\firebasedatabase.net.4.2.0.nupkg.sha512",
+    "C:\\Users\\leanv\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\leanv\\.nuget\\packages\\microsoft.netcore.jit\\2.0.8\\microsoft.netcore.jit.2.0.8.nupkg.sha512",
