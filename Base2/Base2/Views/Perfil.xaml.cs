@@ -37,7 +37,7 @@ namespace Base2
 
         private async void BtnNotificaciones_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Notificaciones", "Notificaciones de la escuela", "OK");
+            await Navigation.PushAsync(new NotificacionesPage());
         }
 
         private async void BtnInfoPersonal_Clicked(object sender, EventArgs e)

@@ -36,27 +36,27 @@
                                                  CommandParameter="{Binding}" />
                                     <!-- Footer superpuesto -->
                                     <Grid VerticalOptions="End"
-                              HeightRequest="100"
-                              BackgroundColor="#65263125">
+                                            HeightRequest="100"
+                                            BackgroundColor="#65263125">
                                         <Grid.Background>
                                             <LinearGradientBrush StartPoint="0,0"
                                                      EndPoint="0,1">
                                                 <GradientStop Color="#AA263125"
-                                                  Offset="0.0" />
+                                                              Offset="0.0" />
                                                 <GradientStop Color="#AA263125"
-                                                  Offset="1.0" />
+                                                              Offset="1.0" />
                                             </LinearGradientBrush>
                                         </Grid.Background>
                                         <StackLayout VerticalOptions="End"
-                                         Padding="10">
+                                                      Padding="10">
                                             <Label Text="{Binding FirstName}"
-                                       FontSize="24"
-                                       HorizontalOptions="Center"
-                                       TextColor="White" />
+                                                    FontSize="24"
+                                                    HorizontalOptions="Center"
+                                                    TextColor="White" />
                                             <Label Text="{Binding LastName}"
-                                       FontSize="18"
-                                       HorizontalOptions="Center"
-                                       TextColor="White" />
+                                                    FontSize="18"
+                                                    HorizontalOptions="Center"
+                                                    TextColor="White" />
                                         </StackLayout>
                                     </Grid>
                                 </Grid>

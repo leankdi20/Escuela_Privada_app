@@ -5,23 +5,25 @@ using System.Text;
 
 namespace Base2.models
 {
-    [Table("Avisos")]
-    public class Avisos
+    [Table("Notificacion")]
+    public class Notificacion
     {
         [PrimaryKey, AutoIncrement]
-        public int IdAviso { get; set; }
+        public string IdNotificacion { get; set; }
 
         [MaxLength(100)]
-        public string Title { get; set; }
+        public string Titulo { get; set; }
 
         [MaxLength(500)]
-        public string Contenido { get; set; }
+        public string Mensaje { get; set; }
         
         [MaxLength(50)]
-        public DateTime Date { get; set; }
+        public DateTime Fecha { get; set; }
+
+        public bool Leida { get; set; }
 
         // Propiedad para la FK
-        public int IdUser { get; set; }
+        public string IdUser { get; set; }
 
         // Relación con Usuario
         [Ignore]

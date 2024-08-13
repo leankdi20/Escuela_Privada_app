@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.NovedadesPage"
+             BackgroundColor="#365359"
+             >
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Novedades" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   Margin="0,20,0,10"/>
+
+            <!-- Lista de Novedades -->
+            <CollectionView ItemsSource="{Binding NovedadesList}" 
+                            VerticalOptions="FillAndExpand"
+                            >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15" Margin="0,10,0,10" BackgroundColor="White" HasShadow="True" CornerRadius="15" BorderColor="Black">
+                            <StackLayout Spacing="10">
+                                <Label Text="{Binding Titulo}" 
+                                       FontSize="20" 
+                                       FontAttributes="Bold" 
+                                       TextColor="#2C3E50"/>
+                                <Label Text="{Binding Descripcion}" 
+                                       FontSize="16" 
+                                       TextColor="#7F8C8D"/>
+                                <BoxView HeightRequest="1" BackgroundColor="#ECF0F1"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                    <Label Text="{Binding Fecha, StringFormat='Fecha: {0:dd/MM/yyyy}'}" 
+                                           FontSize="14" 
+                                           TextColor="#34495E"/>
+                                    <Image Source="school_logo.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

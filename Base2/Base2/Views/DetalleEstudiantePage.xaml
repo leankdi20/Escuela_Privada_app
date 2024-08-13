@@ -1,21 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Base2.Views.DetalleEstudiantePage">
+             x:Class="Base2.Views.DetalleEstudiantePage"
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Padding="20">
-                <Label Text="{Binding FirstName}" FontSize="24" />
-                <Label Text="{Binding LastName}" FontSize="24" />
-                <Label Text="{Binding Cedula}" FontSize="18" />
-                <Label Text="{Binding City}" FontSize="18" />
-                <Label Text="{Binding Enfermedad}" FontSize="18" />
-                <Label Text="{Binding NombreMedicina}" FontSize="18" />
-                <Label Text="{Binding Descripcion}" FontSize="18" />
-                <Label Text="{Binding Alergia}" FontSize="18" />
-                <Image Source="{Binding FotoPerfil}" HeightRequest="300" Aspect="AspectFill" />
-                <!-- Agrega más campos según sea necesario -->
+            <StackLayout>
+                <Label Text="Estudiante" FontSize="24" TextColor="Black" HorizontalOptions="Center" />
             </StackLayout>
+            <ScrollView>
+                <StackLayout Padding="20">
+                    <StackLayout >
+                        <Frame CornerRadius="150" HeightRequest="120" WidthRequest="120" BackgroundColor="White"
+                               IsClippedToBounds="True" Margin="50,0,50,0">
+                            <Grid>
+                                
+                                <Image Source="{Binding FotoPerfil}" HeightRequest="120" WidthRequest="120" 
+                                                                     Aspect="AspectFill"
+                                       Margin="20,0,20,0"/>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                    
+                    <!--Encabezado para Datos personales y Calificaciones-->
+                    <StackLayout Orientation="Horizontal">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="Datos personales" 
+                                       TextColor="Black"  
+                                       FontSize="Medium" 
+                                       VerticalOptions="Center" 
+                                       HorizontalOptions="Center"> 
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDatosPersonalesTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Text="Calificaciones" 
+                                       TextColor="Black"  
+                                       FontSize="Medium" 
+                                       VerticalOptions="Center" 
+                                       HorizontalOptions="Center"
+                                       Grid.Column="1">  
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnCalificacionesTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </StackLayout>
+
+                    <ScrollView Orientation="Horizontal" IsVisible="True"  x:Name="DatosPersonalesScrollView">
+                        <Grid ColumnSpacing="10" RowSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Primer bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="0" Grid.Column="0">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="nombre.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Nombre" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding FirstName}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Segundo bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="0" Grid.Column="1">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="apellido.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Apellido" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding LastName}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Tercer bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="0" Grid.Column="2">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="cedula.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Cédula" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Cedula}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Cuarto bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="0" Grid.Column="3">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="city.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Ciudad" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding City}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Quinto bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="1" Grid.Column="0">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="address.png" HeightRequest="24" WidthRequest="24" />
+                               
+                                    <Label Text="Dirección" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Address}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Sexto bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="1" Grid.Column="1">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="Nommedicina.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Medicina" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding NombreMedicina}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Séptimo bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="1" Grid.Column="2">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="descripcion.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Dosis" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Descripcion}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <!-- Octavo bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="1" Grid.Column="3">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="alergia.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Alergia" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Alergia}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <!-- noveno bloque -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="2" Grid.Column="0">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Image Source="enfermedad.png" HeightRequest="24" WidthRequest="24" />
+                                    <Label Text="Enfermedad" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Enfermedad}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+  
+                    </ScrollView>
+
+                    <!-- Sección de Calificaciones -->
+                    <ScrollView x:Name="CalificacionesScrollView" Orientation="Horizontal" IsVisible="False">
+                        <Grid ColumnSpacing="10" RowSpacing="10">
+                            <!-- Definición de las columnas y filas del Grid -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <!-- Bloques de calificaciones -->
+                            <Frame Padding="10" CornerRadius="10" BackgroundColor="LightGray" Grid.Row="0" Grid.Column="0">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                                    <Label Text="Materia" FontSize="15" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding Materia}" FontSize="18" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <!-- Otros bloques similares... -->
+                        </Grid>
+                    </ScrollView>
+
+                    <!-- Agrega más campos según sea necesario -->
+                </StackLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -41,3 +41,5 @@ C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\DetalleEstudiantePage.xaml.g.cs
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\MostrarEstudiantePage.xaml.g.cs
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\Ayuda.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\NotificacionesPage.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\NovedadesPage.xaml.g.cs

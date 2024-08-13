@@ -18,5 +18,17 @@ namespace Base2.Views
 			InitializeComponent ();
             BindingContext = estudiante; // Establece el contexto de enlace con el estudiante pasado
         }
-	}
+
+        private void OnDatosPersonalesTapped(object sender, EventArgs e)
+        {
+            DatosPersonalesScrollView.IsVisible = true;
+            CalificacionesScrollView.IsVisible = false;
+        }
+
+        private void OnCalificacionesTapped(object sender, EventArgs e)
+        {
+            DatosPersonalesScrollView.IsVisible = false;
+            CalificacionesScrollView.IsVisible = true;
+        }
+    }
 }

@@ -48,6 +48,12 @@
     <EmbeddedResource Update="Views\MostrarUsuarios.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\NotificacionesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NovedadesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Perfil.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -69,6 +75,9 @@
   <ItemGroup>
     <Compile Update="Views\MostrarEstudiantePage.xaml.cs">
       <DependentUpon>MostrarEstudiantePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NotificacionesPage.xaml.cs">
+      <DependentUpon>NotificacionesPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

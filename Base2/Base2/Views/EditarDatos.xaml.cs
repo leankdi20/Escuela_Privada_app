@@ -66,6 +66,7 @@ namespace Base2.Views
                 if (isUpdated)
                 {
                     await DisplayAlert("Success", "Datos actualizados correctamente", "OK");
+                    await Navigation.PushAsync(new InformacionPersonal());
                 }
                 else
                 {

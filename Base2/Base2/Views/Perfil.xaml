@@ -104,7 +104,7 @@
                             <BoxView Grid.Row="1" HeightRequest="1" 
                                  Margin="20,0,20,0" Color="#f7f7f7" HorizontalOptions="FillAndExpand"/>
 
-                            <!--Notificaciones -->
+                            <!--Ayuda a mejorar -->
                             <Button  Grid.Row="2" Text="Ayudanos a mejorar" TextColor="Black"
                                BackgroundColor="Transparent" Margin="20,0,0,0"
                                 x:Name="btnAyudaMejora" HorizontalOptions="Start" TextTransform="None" />
@@ -112,7 +112,7 @@
                         </Grid>
                     </Frame>
 
-                    <!--Frame Ayuda y valoracion-->
+                    <!--Cerrar-->
                     <Label Text="Cerrar Sesión" FontSize="20" Margin="25,15,0,5" TextColor="Black" />
                     <Frame CornerRadius="20" HeightRequest="70" Padding="0" HasShadow="True" Margin="25,0,25,0" >
                         <Grid Padding="8">

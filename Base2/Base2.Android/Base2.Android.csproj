@@ -130,6 +130,15 @@
     <AndroidResource Include="Resources\drawable\ImgPerfilMujer.png" />
     <AndroidResource Include="Resources\drawable\ImgPerfilNina.jpg" />
     <AndroidResource Include="Resources\drawable\ImgPerfilNino.jpg" />
+    <AndroidResource Include="Resources\drawable\address.png" />
+    <AndroidResource Include="Resources\drawable\alergia.png" />
+    <AndroidResource Include="Resources\drawable\apellido.png" />
+    <AndroidResource Include="Resources\drawable\cedula.png" />
+    <AndroidResource Include="Resources\drawable\city.png" />
+    <AndroidResource Include="Resources\drawable\Descripcion.png" />
+    <AndroidResource Include="Resources\drawable\enfermedad.png" />
+    <AndroidResource Include="Resources\drawable\nombre.png" />
+    <AndroidResource Include="Resources\drawable\Nommedicina.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -41,8 +41,9 @@ namespace Base2
         private async void BtnNovedades_Clicked(object sender, EventArgs e)
         {
             ShowMessage("Novedades de la escuela");
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             HideMessage();
+            await Navigation.PushAsync(new NovedadesPage());
         }
 
         private async void BtnEstudiante_Clicked(object sender, EventArgs e)

@@ -16,14 +16,15 @@ namespace Base2
     {
         public ObservableCollection<CarouselItem> CarouselItems { get; set; }
         public Usuario usuario { get; set; }
-       
+        private FBUserRepository userRepo;
+
         public MenuPrincipal()
         {
             InitializeComponent();
-
-            
+            userRepo = new FBUserRepository();
+            CargarDatosUsuario();
             //Email = email;
-            lblname.Text = "¡Bienvenido " + SessionData.UserName + "!";
+            
            
 
 
@@ -51,6 +52,30 @@ namespace Base2
             await Navigation.PushAsync(new AgregarEstudiante());
         }
 
-      
+
+        private async void CargarDatosUsuario()
+        {
+            try
+            {
+                var user = await userRepo.GetUserById(SessionData.IdUser);
+
+                if (user != null)
+                {
+                    // Asignar los datos del usuario a las etiquetas
+                    
+                    lblname.Text = "¡Bienvenido " + user.FirstName + "!" ?? string.Empty;
+
+                }
+                else
+                {
+                    await DisplayAlert("Error", "No se pudieron cargar los datos del usuario.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Ocurrió un error al cargar los datos: {ex.Message}\nDetalles: {ex.StackTrace}", "OK");
+            }
+        }
+
     }
 }

@@ -25,13 +25,15 @@ namespace Base2.Views
         {
             InitializeComponent();
             userRepo = new FBUserRepository();
+            CargarDatosUsuario();
+            
             btnEditarDatos.Clicked += BtnEditarDatos_Clicked;
             
 
             btnAgregarEstudiante.Clicked += BtnAgregarEstudiante_Clicked;
             btnListado.Clicked += BtnListado_Clicked;
 
-            CargarDatosUsuario();
+            
             
 
             if (SessionData.UserName != null)
@@ -73,33 +75,38 @@ namespace Base2.Views
 
         private async void CargarDatosUsuario()
         {
-            var user = await userRepo.GetUserById(SessionData.IdUser);
-
-            if (user != null)
+            try
             {
-                // Asignar los datos del usuario a los campos de la interfaz
+                var user = await userRepo.GetUserById(SessionData.IdUser);
 
-                if (!string.IsNullOrEmpty(user.FotoPerfil))
+                if (user != null)
                 {
-                    // Aquí asumes que FotoPerfil contiene una ruta de archivo local o una imagen de recurso
-                    ProfileImage.Source = ImageSource.FromFile(user.FotoPerfil);
+                    // Asignar los datos del usuario a las etiquetas
+                    txtNombre.Text = user.FirstName ?? string.Empty;
+                    txtEmail.Text = user.Email ?? string.Empty;
+                    txtFechaNacimiento.Text = user.FechaNacimiento?.ToString("dd/MM/yyyy") ?? "Fecha no disponible";
+                    txtEdad.Text = user.Edad > 0 ? user.Edad.ToString() : "Edad no disponible";
+                    txtGenero.Text = user.Genero ?? "Género no disponible";
+
+                    if (!string.IsNullOrEmpty(user.FotoPerfil))
+                    {
+                        ProfileImage.Source = ImageSource.FromFile(user.FotoPerfil);
+                    }
+                    else
+                    {
+                        ProfileImage.Source = user.Genero == "Masculino" ? "ImgPerfilHombre.jpg" : "ImgPerfilMujer.png";
+                    }
                 }
                 else
                 {
-                    // Si no hay foto de perfil, asigna la imagen predeterminada basada en el género del usuario
-                    ProfileImage.Source = user.Genero == "Masculino" ? "ImgPerfilHombre.jpg" : "ImgPerfilMujer.png";
+                    await DisplayAlert("Error", "No se pudieron cargar los datos del usuario.", "OK");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                await DisplayAlert("Error", "No se pudieron cargar los datos del usuario.", "OK");
-                // En caso de que no se pueda cargar el usuario, también puedes asignar una imagen predeterminada
-                ProfileImage.Source = "defaultProfilePicture.jpg"; // Recurso de imagen predeterminada
+                await DisplayAlert("Error", $"Ocurrió un error al cargar los datos: {ex.Message}\nDetalles: {ex.StackTrace}", "OK");
             }
         }
-
-
-
 
         private async void BtnEditarDatos_Clicked(object sender, EventArgs e)
         {

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.NotificacionesPage"
+             BackgroundColor="LightGray">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Notificaciones" FontSize="24" TextColor="Black" HorizontalOptions="Center" />
+
+            <!-- Eliminar el ScrollView envolviendo el ListView -->
+            <ListView x:Name="NotificacionesListView" ItemsSource="{Binding Notificaciones}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="10">
+                                <Label Text="{Binding Titulo}" FontSize="18" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding Mensaje}" FontSize="14" TextColor="DarkGray" LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Fecha, StringFormat='{0:dd/MM/yyyy HH:mm}'}" FontSize="12" TextColor="Gray" HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

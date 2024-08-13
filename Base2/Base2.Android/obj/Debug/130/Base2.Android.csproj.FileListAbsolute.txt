@@ -1450,3 +1450,12 @@ C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilmujer.png
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilnina.jpg
 C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\imgperfilnino.jpg
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\address.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\alergia.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\apellido.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\cedula.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\city.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\descripcion.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\enfermedad.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\nombre.png
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2.Android\obj\Debug\130\res\drawable\nommedicina.png
