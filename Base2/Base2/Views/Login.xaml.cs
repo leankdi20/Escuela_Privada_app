@@ -53,6 +53,7 @@ namespace Base2
 
                 if (user != null)
                 {
+                    Console.WriteLine($"Usuario autenticado: {user.FirstName}, Rol: {user.IdRol}");
                     string welcomeMessage = $"Bienvenido {user.FirstName}";
                     await DisplayAlert("Login Success", welcomeMessage, "OK");
 
@@ -72,11 +73,33 @@ namespace Base2
                     SessionData.FechaNacimiento = user.FechaNacimiento;
                     SessionData.Edad = user.Edad;
 
-                    // Navegar al menú principal
-                    await Navigation.PushAsync(new MenuPrincipal());
+                    // Verificar el rol del usuario y navegar a la vista correspondiente
+                    if (user.IdRol == 1)
+                    {
+                        // Navegar a una vista específica para usuarios con IdRol == 1
+                        //await Navigation.PushAsync(new AdminView());
+                        Console.WriteLine("Navegando a AdminView");
+                    }
+                    else if (user.IdRol == 2)
+                    {
+                        // Navegar al menú principal
+                        await Navigation.PushAsync(new MenuPrincipal());
+                        Console.WriteLine("Navegando a MenuPrincipal");
+                    }
+                    else if (user.IdRol == 3)
+                    {
+                        // Navegar a una vista específica para usuarios con IdRol == 3
+                        //await Navigation.PushAsync(new TeacherView());
+                        Console.WriteLine("Navegando a TeacherView");
+                    }
+                    else
+                    {
+                        await DisplayAlert("Login", "Usuario no encontrado", "OK");
+                    }
                 }
                 else
                 {
+                    Console.WriteLine("Login Failed: Usuario no encontrado.");
                     await DisplayAlert("Login", "Login Failed", "OK");
                 }
             }

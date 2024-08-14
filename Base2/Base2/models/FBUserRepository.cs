@@ -21,26 +21,27 @@ namespace Base2.models
 
 
 
-        //buscar usuario para login en la bd Firebase
         public async Task<Usuario> AuthenticateUser(string email, string password)
         {
             try
             {
                 var users = await GetAll();
                 Console.WriteLine("Usuarios obtenidos:");
+
                 foreach (var u in users)
                 {
-                    Console.WriteLine($"Email: {u.Email}, Password: {u.Password}, FotoPerfil: {u.FotoPerfil}");
+                    Console.WriteLine($"Email: {u.Email}, Password: {u.Password}, IdRol: {u.IdRol}");
                 }
 
-                var user = users.FirstOrDefault(u => u.Email == email && u.Password == password);
+                var user = users.FirstOrDefault(u => u.Email.Equals(email, StringComparison.OrdinalIgnoreCase) && u.Password == password);
+
                 if (user == null)
                 {
                     Console.WriteLine("Usuario no encontrado.");
                 }
                 else
                 {
-                    Console.WriteLine($"Usuario encontrado: {user.Email}");
+                    Console.WriteLine($"Usuario encontrado: {user.Email}, Rol: {user.IdRol}");
                 }
 
                 return user;
@@ -51,7 +52,6 @@ namespace Base2.models
                 return null;
             }
         }
-
 
 
         public async Task InitializeRoles()
@@ -136,25 +136,51 @@ namespace Base2.models
         {
             try
             {
-                var usuarios = (await firebaseClient.Child(nameof(Usuario)).OnceAsync<Usuario>()).Select(item => new Usuario
+                // Obtener el snapshot de los usuarios desde Firebase
+                var usuariosSnapshot = await firebaseClient.Child(nameof(Usuario)).OnceAsync<Usuario>();
+
+                // Verificar cuántos elementos se han obtenido en el snapshot
+                Console.WriteLine($"Cantidad de elementos obtenidos del snapshot: {usuariosSnapshot.Count}");
+
+                // Crear una lista para almacenar los usuarios procesados
+                var usuarios = new List<Usuario>();
+
+                // Procesar cada elemento del snapshot
+                foreach (var item in usuariosSnapshot)
                 {
-                    Email = item.Object.Email,
-                    FirstName = item.Object.FirstName,
-                    FotoPerfil = item.Object.FotoPerfil,
-                    IdUser = item.Key,
-                    Password = item.Object.Password,
-                    LastName = item.Object.LastName,
-                    Phone = item.Object.Phone,
-                    Address = item.Object.Address,
-                    City = item.Object.City,
-                    FechaNacimiento = item.Object.FechaNacimiento,
-                    Edad = item.Object.Edad,
-                    Genero = item.Object.Genero,
-                    IdRol = item.Object.IdRol
+                    try
+                    {
+                        // Intentar mapear el elemento a un objeto Usuario
+                        var usuario = new Usuario
+                        {
+                            Email = item.Object.Email ?? "Sin email",
+                            FirstName = item.Object.FirstName ?? "Sin nombre",
+                            FotoPerfil = item.Object.FotoPerfil ?? string.Empty,
+                            IdUser = item.Key,
+                            Password = item.Object.Password ?? string.Empty,
+                            LastName = item.Object.LastName ?? "Sin apellido",
+                            Phone = item.Object.Phone ?? "Sin teléfono",
+                            Address = item.Object.Address ?? "Sin dirección",
+                            City = item.Object.City ?? "Sin ciudad",
+                            FechaNacimiento = item.Object.FechaNacimiento ?? DateTime.MinValue,
+                            Edad = item.Object.Edad ,
+                            Genero = item.Object.Genero ?? "Sin género",
+                            IdRol = item.Object.IdRol
+                        };
 
-                }).ToList();
+                        Console.WriteLine($"Procesando usuario: {item.Key} - {usuario.Email}");
 
-                Console.WriteLine("Cantidad de usuarios obtenidos: " + usuarios.Count);
+                        // Agregar el usuario a la lista
+                        usuarios.Add(usuario);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Capturar y mostrar cualquier error al procesar un usuario específico
+                        Console.WriteLine($"Error al procesar usuario con ID {item.Key}: {ex.Message}");
+                    }
+                }
+
+                Console.WriteLine("Cantidad de usuarios convertidos: " + usuarios.Count);
                 return usuarios;
             }
             catch (Exception ex)
@@ -163,6 +189,7 @@ namespace Base2.models
                 return new List<Usuario>();
             }
         }
+
 
 
         public async Task<Usuario> GetUserById(string id)
