@@ -1430,23 +1430,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leanv\\.nuget\\packages\\": {},
+    "C:\\Users\\XPC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
+      "projectUniqueName": "C:\\Users\\XPC\\Source\\Repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
       "projectName": "Base2",
-      "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
-      "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\obj\\",
+      "projectPath": "C:\\Users\\XPC\\Source\\Repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
+      "packagesPath": "C:\\Users\\XPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\XPC\\Source\\Repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\XPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

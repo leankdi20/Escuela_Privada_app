@@ -33,7 +33,7 @@
                     <Label x:Name="StatusMessage" FontSize="Medium"/>
                     <!-- ImageButton en la segunda columna -->
                     <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
-                             HorizontalOptions="End" VerticalOptions="Center"/>
+                             HorizontalOptions="End" VerticalOptions="Center" x:Name="BtnNotificaciones"/>
                 </Grid>
             </StackLayout>
 

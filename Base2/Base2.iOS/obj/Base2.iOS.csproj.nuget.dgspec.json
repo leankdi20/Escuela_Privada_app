@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj": {}
+    "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj": {
+    "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
         "projectName": "Base2.iOS",
-        "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
-        "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.iOS\\obj\\",
+        "projectPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.iOS\\Base2.iOS.csproj",
+        "packagesPath": "C:\\Users\\XPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
-                "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
+              "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
+                "projectPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
               }
             }
           }
@@ -77,20 +77,20 @@
         }
       }
     },
-    "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
+    "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
+        "projectUniqueName": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
         "projectName": "Base2",
-        "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
-        "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\obj\\",
+        "projectPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj",
+        "packagesPath": "C:\\Users\\XPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

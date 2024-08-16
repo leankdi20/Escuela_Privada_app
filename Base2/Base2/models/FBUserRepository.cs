@@ -284,6 +284,28 @@ namespace Base2.models
         }
 
 
+        public async Task<bool> SaveAviso(Aviso aviso)
+        {
+            try
+            {
+               
+
+                var data = await firebaseClient.Child(nameof(Aviso)).PostAsync(JsonConvert.SerializeObject(aviso));
+                if (!string.IsNullOrEmpty(data.Key))
+                {
+                    aviso.IdAviso = data.Key;  // Asignar la clave generada al estudiante
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving aviso: {ex.Message}");
+                return false;
+            }
+        }
+
+
         // Método para obtener todos los estudiantes asociados a un usuario
         public async Task<List<Estudiante>> GetEstudiantesByUserId(string userId)
         {
@@ -319,5 +341,92 @@ namespace Base2.models
             }
         }
 
+        public async Task<Usuario> GetUserByEmail(string email)
+        {
+            try
+            {
+                var userQuery = (await firebaseClient
+                    .Child(nameof(Usuario))
+                    .OnceAsync<Usuario>())
+                    .Where(item => item.Object.Email.ToLower() == email.ToLower())
+                    .Select(item => new Usuario
+                    {
+                        IdUser = item.Key, 
+                        FirstName = item.Object.FirstName,
+                        LastName = item.Object.LastName,
+                        Email = item.Object.Email,
+                        Password = item.Object.Password,
+                        Phone = item.Object.Phone,
+                        Address = item.Object.Address,
+                        City = item.Object.City,
+                        FotoPerfil = item.Object.FotoPerfil,
+                        FechaNacimiento = item.Object.FechaNacimiento,
+                        Edad = item.Object.Edad,
+                        Genero = item.Object.Genero,
+                        IdRol = item.Object.IdRol
+                    })
+                    .FirstOrDefault();
+
+                // If no user was found, return null and log a message
+                if (userQuery == null)
+                {
+                    Console.WriteLine("Usuario no encontrado con el correo proporcionado.");
+                    return null;
+                }
+
+                // Log the retrieved user's email and return the user object
+                Console.WriteLine($"Usuario encontrado: {userQuery.Email}");
+                return userQuery;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting user by email: {ex.Message}");
+                return null;
+            }
+
+
+
+        }
+
+
+        public async Task<List<Aviso>> GetAvisosByUserId(string userId)
+        {
+            try
+            {
+                var allAvisos = (await firebaseClient.Child(nameof(Aviso)).OnceAsync<Aviso>())
+                    .Select(item => new Aviso
+                    {
+                        IdAviso = item.Key, 
+                        TipoAviso = item.Object.TipoAviso,
+                        FechaEnvio = item.Object.FechaEnvio,
+                        Mensaje = item.Object.Mensaje,
+                        IdUser = item.Object.IdUser,
+                        IdEstudiante = item.Object.IdEstudiante
+                    })
+                    .ToList();
+
+                var filteredAvisos = allAvisos.Where(a =>
+                    a.IdUser == userId ||
+                    a.IdAviso == "O4ONnbj2lDpVb8njkYr"
+
+                ).ToList();
+
+                if (!filteredAvisos.Any())
+                {
+                    Console.WriteLine("No avisos encontrados");
+                }
+
+                return filteredAvisos;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error consiguiendo avisos: {ex.Message}");
+                return new List<Aviso>();
+            }
+        }
+
+
     }
+
+
 }

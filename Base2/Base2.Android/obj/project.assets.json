@@ -4921,24 +4921,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leanv\\.nuget\\packages\\": {},
+    "C:\\Users\\XPC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
+      "projectUniqueName": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
       "projectName": "Base2.Android",
-      "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
-      "packagesPath": "C:\\Users\\leanv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2.Android\\obj\\",
+      "projectPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.Android\\Base2.Android.csproj",
+      "packagesPath": "C:\\Users\\XPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\XPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4952,8 +4952,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
-              "projectPath": "C:\\Users\\leanv\\OneDrive\\Escritorio\\VII_Cuatrimestre\\Lenguaje C#\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
+            "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj": {
+              "projectPath": "C:\\Users\\XPC\\source\\repos\\leankdi20\\Escuela_Privada_app\\Base2\\Base2\\Base2.csproj"
             }
           }
         }
@@ -4971,9 +4971,21 @@
             "target": "Package",
             "version": "[1.8.1, )"
           },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.8.1, )"
+          },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2662, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2662, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.9.172, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -4988,7 +5000,7 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Degradación del paquete detectada: Xamarin.AndroidX.RecyclerView de 1.2.1.5 a 1.2.1.1. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n Base2.Android -> Xamarin.Forms 5.0.0.2662 -> Xamarin.AndroidX.Preference 1.1.1.13 -> Xamarin.AndroidX.RecyclerView (>= 1.2.1.5) \r\n Base2.Android -> Xamarin.Forms 5.0.0.2662 -> Xamarin.AndroidX.RecyclerView (>= 1.2.1.1 && < 1.4.0)",
+      "message": "Detected package downgrade: Xamarin.AndroidX.RecyclerView from 1.2.1.5 to 1.2.1.1. Reference the package directly from the project to select a different version. \r\n Base2.Android -> Xamarin.Forms 5.0.0.2662 -> Xamarin.AndroidX.Preference 1.1.1.13 -> Xamarin.AndroidX.RecyclerView (>= 1.2.1.5) \r\n Base2.Android -> Xamarin.Forms 5.0.0.2662 -> Xamarin.AndroidX.RecyclerView (>= 1.2.1.1 && < 1.4.0)",
       "libraryId": "Xamarin.AndroidX.RecyclerView",
       "targetGraphs": [
         "MonoAndroid,Version=v13.0"

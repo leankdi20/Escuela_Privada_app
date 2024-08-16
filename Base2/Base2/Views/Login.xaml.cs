@@ -72,8 +72,32 @@ namespace Base2
                     SessionData.FechaNacimiento = user.FechaNacimiento;
                     SessionData.Edad = user.Edad;
 
-                    // Navegar al menú principal
-                    await Navigation.PushAsync(new MenuPrincipal());
+                    // Navegar al menú Admin
+                    if (user.IdRol == 1)
+                    {
+
+                          
+
+                    }
+
+                    // Navegar al menú docente
+                    else if (user.IdRol == 2)
+                    {
+
+                        await Navigation.PushAsync(new MenuPrincipal());
+
+                    }
+                    // Navegar al menú tutor
+                    else if (user.IdRol == 3)
+                    {
+
+                        await Navigation.PushAsync(new MenuPrincipalDocente());
+
+                    } 
+
+                    
+                    
+                    
                 }
                 else
                 {

@@ -38,8 +38,14 @@ namespace Base2
             BindingContext = this;
 
             btnAdd.Clicked += BtnAdd_Clicked;
+            BtnNotificaciones.Clicked += BtnNotificaciones_Clicked;
            // btnAnuncio.Clicked += BtnAnuncio_Clicked;
 
+        }
+
+        async void BtnNotificaciones_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AvisosPadre());
         }
 
         private async void BtnAnuncio_Clicked(object sender, EventArgs e)

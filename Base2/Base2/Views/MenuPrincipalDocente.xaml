@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.MenuPrincipalDocente">
+    <ContentPage.Content>
+        <Grid >
+            <!-- Definición de filas -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Encabezado -->
+                <!-- Contenido -->
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="#365359" Padding="20" HeightRequest="100">
+                <Grid Margin="-10,20,0,0">
+                    <!-- Definición de columnas -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="escuelaPrivada.png" WidthRequest="60"  Margin="0,0,10,0"/>
+                    <!-- Label en la primera columna -->
+                    <Label Grid.Column="1" Text="Avisos Docente" FontSize="25" HorizontalOptions="Start" 
+                      VerticalOptions="Center" TextColor="White" 
+                           Margin="0,0,0,10"/>
+
+                    <!-- ImageButton en la segunda columna -->
+                    <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
+                             HorizontalOptions="End" VerticalOptions="Center"/>
+                </Grid>
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="1"   BackgroundColor="#365359" Padding="20" >
+
+                <Label Text=" Enviar a todos" FontSize="Medium" TextColor="White" ></Label>
+                <CheckBox x:Name="EnviarATodos" ></CheckBox>
+                
+                <Label Text="CorreoTutor " FontSize="Title" TextColor="White" x:Name="LabelCorreoTutor"></Label>
+                <Entry Margin="0,0,0,0" x:Name="EntryCorreoTutor" IsEnabled="True"></Entry>
+
+
+                <Label Text="Tipo de aviso " FontSize="Medium" TextColor="White"></Label>
+
+                <Picker Margin="0,0,0,0" x:Name="PickerTipoAviso" Title="Tipo de aviso" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Notas</x:String>
+                            <x:String>Aviso General</x:String>
+                            <x:String>Amonestacion</x:String>
+                            <x:String>Felicidades</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Mensaje " FontSize="Medium" TextColor="White" ></Label>
+                <Entry Margin="0,0,0,0" x:Name="EntryMensaje"></Entry>
+
+
+                <Label Text="Ingrese el estudiante" FontSize="Medium" TextColor="White" x:Name="labelPickerEstudiante"></Label>
+
+                <Picker Margin="0,0,0,0" x:Name="PickerEstudiante" Title="Estudiante" IsEnabled="True">
+                </Picker>
+                <Button x:Name="BtnEnviar" Text="Enviar" FontSize="Medium" BackgroundColor="White" ></Button>
+
+            </StackLayout>
+
+
+           
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
