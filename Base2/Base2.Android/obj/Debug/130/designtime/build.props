@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638591012689576221
+_nugetassetstimestamp=638593644293347118
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\leanv\onedrive\escritorio\vii_cuatrimestre\lenguaje c#\escuela_privada_app\base2\base2.android\base2.android.csproj
+projectfullpath=c:\users\xpc\source\repos\leankdi20\escuela_privada_app\base2\base2.android\base2.android.csproj

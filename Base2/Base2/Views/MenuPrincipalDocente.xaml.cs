@@ -152,10 +152,7 @@ namespace Base2.Views
 
         }
 
-        private void BtnReporte_Clicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+  
 
         private async void BtnEnviar_Clicked(object sender, EventArgs e)
         {

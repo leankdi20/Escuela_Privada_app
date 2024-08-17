@@ -4971,21 +4971,9 @@
             "target": "Package",
             "version": "[1.8.1, )"
           },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.8.1, )"
-          },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2662, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2662, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.9.172, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

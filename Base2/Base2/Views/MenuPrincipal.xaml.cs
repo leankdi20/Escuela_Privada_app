@@ -45,7 +45,7 @@ namespace Base2
 
         async void BtnNotificaciones_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AvisosPadre());
+            await Navigation.PushAsync(new AvisosPadre(SessionData.IdUser));
         }
 
         private async void BtnAnuncio_Clicked(object sender, EventArgs e)

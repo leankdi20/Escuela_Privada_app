@@ -89,7 +89,7 @@ namespace Base2
                     else if (user.IdRol == 3)
                     {
                         // Navegar a una vista específica para usuarios con IdRol == 3
-                        //await Navigation.PushAsync(new TeacherView());
+                        await Navigation.PushAsync(new ProfesorMenuPrincipal());
                         Console.WriteLine("Navegando a TeacherView");
                     }
                     else

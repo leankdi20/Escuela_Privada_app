@@ -75,3 +75,5 @@ C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\ne
 C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Base2.pdb
 C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\MenuPrincipalDocente.xaml.g.cs
 C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AvisosPadre.xaml.g.cs
+C:\Users\XPC\source\repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\ProfesorMenuPrincipal.xaml.g.cs
+C:\Users\XPC\source\repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\VerEstudiantes.xaml.g.cs

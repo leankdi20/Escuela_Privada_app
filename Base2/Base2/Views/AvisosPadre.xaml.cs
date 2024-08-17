@@ -13,27 +13,28 @@ namespace Base2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AvisosPadre : ContentPage
     {
-        public AvisosPadre()
-        {
-            InitializeComponent();
-        }
 
-
-        private string userId; // Set this according to your logic to retrieve the current user's ID
-        private FBUserRepository userRepo; // Assuming this is already initialized
+        private string userId;
+        private FBUserRepository userRepo;
 
         public AvisosPadre(string currentUserId)
         {
             InitializeComponent();
-            userId = currentUserId; // Assign the userId from the constructor parameter
-            userRepo = new FBUserRepository(); // Initialize your repository
-            LoadAvisosAsync(); // Load the avisos for the current user
+            userId = currentUserId;
+            userRepo = new FBUserRepository();
+            LoadAvisosAsync();
         }
 
         private async void LoadAvisosAsync()
         {
             try
             {
+                if (string.IsNullOrEmpty(userId))
+                {
+                    await DisplayAlert("Error", "User ID is not set.", "OK");
+                    return;
+                }
+
                 var avisos = await userRepo.GetAvisosByUserId(userId);
                 AvisosStackLayout.Children.Clear();
 
@@ -41,11 +42,14 @@ namespace Base2.Views
                 {
                     foreach (var aviso in avisos)
                     {
+                        var estudiante = await userRepo.GetEstudianteById(aviso.IdEstudiante);
+                        var studentName = estudiante != null ? $"{estudiante.FirstName} {estudiante.LastName}" : "Estudiante"; //fijarse en esto despues
+
                         AvisosStackLayout.Children.Add(new Label
                         {
-                            Text = $"{aviso.TipoAviso}: {aviso.Mensaje}",
+                            Text = $"Estudiante: {studentName}\nTipo de aviso: {aviso.TipoAviso}\nMensaje: {aviso.Mensaje}\nFecha de Envio: {aviso.FechaEnvio} \n-----------------------------------------------",
                             TextColor = Color.White,
-                            FontSize = 16,
+                            FontSize = 20,
                             Margin = new Thickness(0, 5, 0, 5)
                         });
                     }
@@ -67,6 +71,7 @@ namespace Base2.Views
                 await DisplayAlert("Error", "Ocurrió un error al cargar los avisos.", "Aceptar");
             }
         }
-    }
 
+
+    }
 }

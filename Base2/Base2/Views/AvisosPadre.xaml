@@ -12,34 +12,26 @@
                 <!-- Contenido y Avisos -->
             </Grid.RowDefinitions>
 
-            <!-- Encabezado -->
             <StackLayout Grid.Row="0" BackgroundColor="#365359" Padding="20" HeightRequest="100">
                 <Grid Margin="-10,20,0,0">
-                    <!-- Definición de columnas -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0" Source="escuelaPrivada.png" WidthRequest="60"  Margin="0,0,10,0"/>
-                    <!-- Label en la primera columna -->
                     <Label Grid.Column="1" Text="Avisos para Padre" FontSize="25" HorizontalOptions="Start" 
                       VerticalOptions="Center" TextColor="White" Margin="0,0,0,10"/>
 
-                    <!-- ImageButton en la segunda columna -->
-                    <ImageButton Grid.Column="2" Source="notifi.png"  WidthRequest="40"  CornerRadius="50"
-                             HorizontalOptions="End" VerticalOptions="Center"/>
                 </Grid>
             </StackLayout>
 
-            <!-- Contenido principal -->
             <StackLayout Grid.Row="1" BackgroundColor="#365359" Padding="20">
-                <!-- Scrollable View for Avisos -->
-                <ScrollView Margin="0,20,0,0">
-                    <StackLayout x:Name="AvisosStackLayout">
-                        <!-- Avisos will be dynamically added here -->
-                    </StackLayout>
-                </ScrollView>
+
+                <StackLayout x:Name="AvisosStackLayout" >
+                    <Label Text="Avisos" TextColor="White"  ></Label>
+                    
+                </StackLayout>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

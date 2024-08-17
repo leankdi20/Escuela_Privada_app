@@ -420,40 +420,106 @@ namespace Base2.models
         {
             try
             {
-                var allAvisos = (await firebaseClient.Child(nameof(Aviso)).OnceAsync<Aviso>())
+                // Fetch and filter the Avisos in one step to avoid unnecessary list creation
+                var filteredAvisos = (await firebaseClient.Child(nameof(Aviso)).OnceAsync<Aviso>())
                     .Select(item => new Aviso
                     {
-                        IdAviso = item.Key, 
+                        IdAviso = item.Key,
                         TipoAviso = item.Object.TipoAviso,
                         FechaEnvio = item.Object.FechaEnvio,
                         Mensaje = item.Object.Mensaje,
                         IdUser = item.Object.IdUser,
                         IdEstudiante = item.Object.IdEstudiante
                     })
+                    .Where(a => a.IdUser == userId || a.IdAviso == "O4ONnbj2lDpVb8njkYr")
                     .ToList();
-
-                var filteredAvisos = allAvisos.Where(a =>
-                    a.IdUser == userId ||
-                    a.IdAviso == "O4ONnbj2lDpVb8njkYr"
-
-                ).ToList();
 
                 if (!filteredAvisos.Any())
                 {
-                    Console.WriteLine("No avisos encontrados");
+                    Console.WriteLine("No avisos found for the given user ID.");
                 }
 
                 return filteredAvisos;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error consiguiendo avisos: {ex.Message}");
+                Console.WriteLine($"Error retrieving avisos: {ex.Message}");
                 return new List<Aviso>();
             }
         }
 
+        public async Task<Estudiante> GetEstudianteById(string idEstudiante)
+        {
+            try
+            {
+                var estudiantes = (await firebaseClient
+                    .Child(nameof(Estudiante))
+                    .OnceAsync<Estudiante>())
+                    .Select(item => new Estudiante
+                    {
+                        IdEstudiante = item.Key,    
+                        FirstName = item.Object.FirstName,
+                        LastName = item.Object.LastName,
+                        FechaNacimiento = item.Object.FechaNacimiento,
+                        Cedula = item.Object.Cedula,
+                        Address = item.Object.Address,
+                        City = item.Object.City,
+                        Genero = item.Object.Genero,
+                        FotoPerfil = item.Object.FotoPerfil,
+                        Enfermedad = item.Object.Enfermedad,
+                        NombreMedicina = item.Object.NombreMedicina,
+                        Descripcion = item.Object.Descripcion,
+                        Alergia = item.Object.Alergia,
+                        IdUser = item.Object.IdUser
+                    })
+                    .FirstOrDefault(e => e.IdEstudiante == idEstudiante); 
+
+                return estudiantes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting student by ID: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<Estudiante>> GetAllEstudiantes()
+        {
+            try
+            {
+                var estudiantes = (await firebaseClient.Child(nameof(Estudiante)).OnceAsync<Estudiante>())
+                    .Select(item => new Estudiante
+                    {
+                        IdEstudiante = item.Key,
+                        FirstName = item.Object.FirstName,
+                        LastName = item.Object.LastName,
+                        FechaNacimiento = item.Object.FechaNacimiento,
+                        Cedula = item.Object.Cedula,
+                        Address = item.Object.Address,
+                        City = item.Object.City,
+                        Genero = item.Object.Genero,
+                        FotoPerfil = item.Object.FotoPerfil,
+                        Enfermedad = item.Object.Enfermedad,
+                        NombreMedicina = item.Object.NombreMedicina,
+                        Descripcion = item.Object.Descripcion,
+                        Alergia = item.Object.Alergia,
+                        IdUser = item.Object.IdUser
+                    })
+                    .ToList();
+
+                return estudiantes;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener estudiantes: {ex.Message}");
+                return new List<Estudiante>();
+            }
+        }
+
+
 
     }
+
 
 
 }
