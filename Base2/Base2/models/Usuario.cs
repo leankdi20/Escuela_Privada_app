@@ -52,6 +52,11 @@ namespace Base2
         [Ignore]
         public Rol Rol { get; set; }
 
-     
+        // Propiedad para manejar la selección
+        public bool IsSelected { get; set; }
+
+        [Ignore]
+        public string FullName => $"{FirstName} {LastName}";
+
     }
 }

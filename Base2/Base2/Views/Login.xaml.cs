@@ -77,7 +77,7 @@ namespace Base2
                     if (user.IdRol == 1)
                     {
                         // Navegar a una vista específica para usuarios con IdRol == 1
-                        //await Navigation.PushAsync(new AdminView());
+                        await Navigation.PushAsync(new AdminPage());
                         Console.WriteLine("Navegando a AdminView");
                     }
                     else if (user.IdRol == 2)
@@ -89,7 +89,7 @@ namespace Base2
                     else if (user.IdRol == 3)
                     {
                         // Navegar a una vista específica para usuarios con IdRol == 3
-                        await Navigation.PushAsync(new ProfesorMenuPrincipal());
+                        await Navigation.PushAsync(new MenuPrincipalDocente());
                         Console.WriteLine("Navegando a TeacherView");
                     }
                     else

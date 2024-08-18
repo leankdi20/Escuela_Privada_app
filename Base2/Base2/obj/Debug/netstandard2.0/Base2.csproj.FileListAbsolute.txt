@@ -77,3 +77,13 @@ C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\ne
 C:\Users\XPC\Source\Repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AvisosPadre.xaml.g.cs
 C:\Users\XPC\source\repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\ProfesorMenuPrincipal.xaml.g.cs
 C:\Users\XPC\source\repos\leankdi20\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\VerEstudiantes.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AvisosPadre.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\MenuPrincipalDocente.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\ProfesorMenuPrincipal.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\VerEstudiantes.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AdminPage.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AdminPageFlyout.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\ButtomMenuProfe.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AvisosPage.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\PerfilDocente.xaml.g.cs
+C:\Users\leanv\OneDrive\Escritorio\VII_Cuatrimestre\Lenguaje C#\Escuela_Privada_app\Base2\Base2\obj\Debug\netstandard2.0\Views\AlumnosPage.xaml.g.cs

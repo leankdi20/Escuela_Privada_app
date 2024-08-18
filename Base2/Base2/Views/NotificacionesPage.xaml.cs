@@ -1,9 +1,11 @@
 ﻿using Base2.models;
+using Firebase.Auth;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,65 +17,57 @@ namespace Base2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotificacionesPage : ContentPage
     {
-        public ObservableCollection<Notificacion> Notificaciones { get; set; }
+        public ObservableCollection<Aviso> Avisos { get; set; }
 
         public NotificacionesPage()
         {
             InitializeComponent();
+            
+            var userId = SessionData.IdUser;
 
-            // Inicializar la lista de notificaciones
-            Notificaciones = new ObservableCollection<Notificacion>
-            {
-                new Notificacion
-                {
-                    Titulo = "Aviso Importante",
-                    Mensaje = "Reunión de padres el lunes.",
-                    Fecha = DateTime.Now,
-                    Leida = false
-                },
-                new Notificacion
-                {
-                    Titulo = "Examen programado",
-                    Mensaje = "Examen de matemáticas el miércoles.",
-                    Fecha = DateTime.Now.AddDays(-1),
-                    Leida = false
-                },
-                new Notificacion
-                {
-                    Titulo = "Salida Escolar",
-                    Mensaje = "Salida escolar programada para el viernes.",
-                    Fecha = DateTime.Now.AddDays(-2),
-                    Leida = false
-                }
-            };
-            // Verificar las fechas en la consola de depuración
-            foreach (var notificacion in Notificaciones)
-            {
-                Debug.WriteLine($"Notificación: {notificacion.Titulo}, Fecha: {notificacion.Fecha}");
-            }
-
-            // Establecer el BindingContext a esta página
+            
             BindingContext = this;
 
-            // Configurar el evento de tap en el ListView
-            NotificacionesListView.ItemTapped += OnNotificationTapped;
+            CargarAvisos(userId);
+        }
+
+        private async void CargarAvisos(string userId)
+        {
+            try
+            {
+                var fbRepository = new FBUserRepository();
+                var avisos = await fbRepository.GetAvisosByUserId(userId);
+
+                if (avisos != null && avisos.Any())
+                {
+                    Avisos = new ObservableCollection<Aviso>(avisos);
+                    NotificacionesListView.ItemsSource = Avisos;
+                }
+                else
+                {
+                    await DisplayAlert("Aviso", "No se encontraron avisos.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"Error cargando avisos: {ex.Message}", "OK");
+            }
         }
 
         private async void OnNotificationTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.Item != null && e.Item is Notificacion notificacion)
+            if (e.Item != null && e.Item is Aviso aviso)
             {
-                // Muestra una alerta con el mensaje completo de la notificación.
-                await DisplayAlert(notificacion.Titulo, notificacion.Mensaje, "OK");
+                // Formatear la fecha de envío para mostrarla en la alerta
+                string fechaFormateada = aviso.FechaEnvio.ToString("dd/MM/yyyy HH:mm");
 
-                // Marca la notificación como leída, si es necesario
-                notificacion.Leida = true;
+                // Combinar el mensaje con la fecha para mostrar en la alerta
+                string mensajeCompleto = $"{aviso.Mensaje}\n\nFecha de Envío: {fechaFormateada}";
 
-                // Actualizar la lista para reflejar cambios
-                NotificacionesListView.ItemsSource = null;
-                NotificacionesListView.ItemsSource = Notificaciones;
+                // Mostrar una alerta con el mensaje completo y la fecha del aviso
+                await DisplayAlert(aviso.TipoAviso, mensajeCompleto, "OK");
 
-                // Desmarca la selección
+                // Desmarcar la selección
                 ((ListView)sender).SelectedItem = null;
             }
         }

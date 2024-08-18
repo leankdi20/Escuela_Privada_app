@@ -11,20 +11,20 @@ namespace Base2
     {
 
         [PrimaryKey, AutoIncrement]
-        public string IdAviso { get; set; }
+        public String IdAviso { get; set; }
 
         [MaxLength(50)]
         public String TipoAviso { get; set; }
 
 
-        [MaxLength(10)]
+        
         public DateTime FechaEnvio { get; set; }
       
         [MaxLength(500)]
         public string Mensaje { get; set; }
 
         //propiedad para la FK
-        public String IdUser { get; set; }
+        public List<string> IdUsers { get; set; }
 
         public String IdEstudiante { get; set; }
 

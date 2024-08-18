@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.AvisosPage"
+             Title="Enviar Aviso">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Enviar Aviso" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   Margin="0,20,0,10"/>
+
+            <!-- Lista de Usuarios -->
+            <CollectionView ItemsSource="{Binding Usuarios}" 
+                            SelectionMode="None"
+                            VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <CheckBox IsChecked="{Binding IsSelected}" />
+                            <Label Text="{Binding FullName}" FontSize="18" VerticalOptions="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Entry para el asunto -->
+            <Label Text="Asunto" 
+                   FontSize="18" 
+                   Margin="0,20,0,5"/>
+            <Entry x:Name="AsuntoEntry" Placeholder="Escriba el asunto aquí..." />
+
+            <!-- Editor para el mensaje -->
+            <Label Text="Mensaje" 
+                   FontSize="18" 
+                   Margin="0,20,0,5"/>
+            <Editor x:Name="MensajeEditor" 
+                    Placeholder="Escriba el mensaje aquí..." 
+                    HeightRequest="100"/>
+
+            <!-- Botón para enviar el aviso -->
+            <Button Text="Enviar Aviso" 
+                    FontSize="Medium" 
+                    BackgroundColor="#2C3E50" 
+                    TextColor="White"
+                    x:Name="btnEnviarAviso"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

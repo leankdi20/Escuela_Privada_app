@@ -97,7 +97,7 @@ namespace Base2.models
                 {
                     user.FotoPerfil = GetDefaultProfilePicture(user);
                 }
-
+ 
                 var data = await firebaseClient.Child(nameof(Usuario)).PostAsync(JsonConvert.SerializeObject(user));
                 if (!string.IsNullOrEmpty(data.Key))
                 {
@@ -315,12 +315,10 @@ namespace Base2.models
         {
             try
             {
-               
-
                 var data = await firebaseClient.Child(nameof(Aviso)).PostAsync(JsonConvert.SerializeObject(aviso));
                 if (!string.IsNullOrEmpty(data.Key))
                 {
-                    aviso.IdAviso = data.Key;  // Asignar la clave generada al estudiante
+                    aviso.IdAviso = data.Key;
                     return true;
                 }
                 return false;
@@ -420,7 +418,7 @@ namespace Base2.models
         {
             try
             {
-                // Fetch and filter the Avisos in one step to avoid unnecessary list creation
+                // Obtén el snapshot de todos los avisos desde Firebase
                 var filteredAvisos = (await firebaseClient.Child(nameof(Aviso)).OnceAsync<Aviso>())
                     .Select(item => new Aviso
                     {
@@ -428,25 +426,39 @@ namespace Base2.models
                         TipoAviso = item.Object.TipoAviso,
                         FechaEnvio = item.Object.FechaEnvio,
                         Mensaje = item.Object.Mensaje,
-                        IdUser = item.Object.IdUser,
+                        IdUsers = item.Object.IdUsers,
                         IdEstudiante = item.Object.IdEstudiante
                     })
-                    .Where(a => a.IdUser == userId || a.IdAviso == "O4ONnbj2lDpVb8njkYr")
+                    // Filtra los avisos que contengan el userId en la lista IdUsers
+                    .Where(a => a.IdUsers != null && a.IdUsers.Contains(userId))
                     .ToList();
+
+                // Agregar las líneas para depurar
+                Console.WriteLine($"Cantidad de avisos filtrados: {filteredAvisos.Count}");
+                foreach (var aviso in filteredAvisos)
+                {
+                    Console.WriteLine($"Aviso: {aviso.Mensaje}, Fecha: {aviso.FechaEnvio}");
+                }
 
                 if (!filteredAvisos.Any())
                 {
-                    Console.WriteLine("No avisos found for the given user ID.");
+                    Console.WriteLine("No se encontraron avisos para el usuario proporcionado.");
                 }
 
                 return filteredAvisos;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error retrieving avisos: {ex.Message}");
+                Console.WriteLine($"Error al obtener avisos: {ex.Message}");
                 return new List<Aviso>();
             }
         }
+
+
+
+
+
+
 
         public async Task<Estudiante> GetEstudianteById(string idEstudiante)
         {
@@ -483,6 +495,10 @@ namespace Base2.models
             }
         }
 
+
+
+
+
         public async Task<List<Estudiante>> GetAllEstudiantes()
         {
             try
@@ -515,6 +531,154 @@ namespace Base2.models
                 return new List<Estudiante>();
             }
         }
+
+        public async Task<bool> SaveNotificacion(Notificacion notificacion)
+        {
+            try
+            {
+                var data = await firebaseClient.Child(nameof(Notificacion)).PostAsync(JsonConvert.SerializeObject(notificacion));
+                if (!string.IsNullOrEmpty(data.Key))
+                {
+                    notificacion.IdNotificacion = data.Key;  // Asignar la clave generada a la notificación
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving notificacion: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<List<Notificacion>> GetAllNotificaciones()
+        {
+            try
+            {
+                var notificaciones = (await firebaseClient
+                    .Child("Notificacion")
+                    .OnceAsync<Notificacion>())
+                    .Select(item => new Notificacion
+                    {
+                        IdNotificacion = item.Key,
+                        Titulo = item.Object.Titulo,
+                        Mensaje = item.Object.Mensaje,
+                        Fecha = item.Object.Fecha,
+                        Leida = item.Object.Leida,
+                        IdUser = item.Object.IdUser
+                    })
+                    .ToList();
+
+                return notificaciones;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener notificaciones: {ex.Message}");
+                return new List<Notificacion>();
+            }
+        }
+
+
+
+        // Método para obtener todos los usuarios asociados a un rol específico
+
+        public async Task<List<Usuario>> GetUsuariosByRol(int rolId)
+        {
+            try
+            {
+                Console.WriteLine("Iniciando la obtención de usuarios por rol...");
+
+                // Obtén el snapshot de los usuarios desde Firebase
+                var usuariosSnapshot = await firebaseClient
+                    .Child(nameof(Usuario))
+                    .OnceAsync<Usuario>();
+
+                Console.WriteLine($"Usuarios obtenidos desde Firebase: {usuariosSnapshot.Count}");
+
+                // Verifica si hay datos en el snapshot
+                if (usuariosSnapshot == null || !usuariosSnapshot.Any())
+                {
+                    Console.WriteLine("No se encontraron usuarios en la base de datos.");
+                    return new List<Usuario>(); // Retorna una lista vacía si no se encuentran usuarios
+                }
+
+                // Mapeo manual de los usuarios
+                var usuarios = new List<Usuario>();
+
+                foreach (var item in usuariosSnapshot)
+                {
+                    try
+                    {
+                        // Mapeo manual de cada usuario
+                        var usuario = new Usuario
+                        {
+                            IdUser = item.Key,
+                            FirstName = item.Object.FirstName ?? string.Empty,
+                            LastName = item.Object.LastName ?? string.Empty,
+                            IdRol = item.Object.IdRol,
+                            Email = item.Object.Email ?? string.Empty,
+                            IsSelected = false // Propiedad que usas para manejar la selección en la UI
+                        };
+
+                        // Solo agregar a la lista si el IdRol coincide con el rolId
+                        if (usuario.IdRol == rolId)
+                        {
+                            usuarios.Add(usuario);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error procesando usuario con ID {item.Key}: {ex.Message}");
+                    }
+                }
+
+                Console.WriteLine($"Usuarios filtrados por IdRol: {usuarios.Count}");
+
+                return usuarios;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error obteniendo usuarios por rol: {ex.Message}");
+                return new List<Usuario>(); // Devuelve una lista vacía en caso de error
+            }
+        }
+
+
+
+
+
+
+        public async Task<List<Notificacion>> GetNotificacionesByUserId(string userId)
+        {
+            try
+            {
+                var notificaciones = (await firebaseClient
+                .Child("Aviso") // Asegúrate de que este sea el nodo correcto
+                .OnceAsync<Notificacion>())
+                .Select(item => new Notificacion
+                {
+                    IdNotificacion = item.Key,
+                    Titulo = item.Object.Titulo,
+                    Mensaje = item.Object.Mensaje,
+                    Fecha = item.Object.Fecha,
+                    Leida = item.Object.Leida,
+                    IdUser = item.Object.IdUser
+                })
+                .Where(n => n.IdUser == userId) // Filtrar por el ID del usuario logueado
+                .ToList();
+
+                Console.WriteLine($"Cantidad de notificaciones obtenidas: {notificaciones.Count}");
+
+
+                return notificaciones;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener notificaciones por usuario: {ex.Message}");
+                return new List<Notificacion>();
+            }
+        }
+
 
 
 

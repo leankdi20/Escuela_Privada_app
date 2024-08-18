@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.AdminPage"
+             Title="Administrador">
+
+    <ContentPage.Content>
+        <Grid>
+            <!-- Definir las filas y columnas de la Grid -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <!-- Fila para el botón de menú -->
+                <RowDefinition Height="*" />
+                <!-- Fila para el contenido -->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <!-- Columna para el menú -->
+                <ColumnDefinition Width="*" />
+                <!-- Columna para el contenido -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Botón para ocultar/mostrar el menú -->
+            <Button Text="≡"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Command="{Binding ToggleMenuCommand}"
+                   BackgroundColor="LightGray"
+                   BorderColor="Transparent"
+                   WidthRequest="110"
+                   HeightRequest="50"
+                   Margin="0" />
+
+            <!-- Menú lateral izquierdo -->
+            <StackLayout x:Name="MenuStackLayout" 
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="LightGray"
+                         IsVisible="True">
+                <Button Text="Admin"
+                        Command="{Binding ShowViewCommand}"
+                        CommandParameter="Role1View" FontSize="12"/>
+                <Button Text="Tutor"
+                        Command="{Binding ShowViewCommand}"
+                        CommandParameter="Role2View" FontSize="12"/>
+                <Button Text="Docente"
+                        Command="{Binding ShowViewCommand}"
+                        CommandParameter="Role3View" FontSize="12"/>
+                <Button Text="Notificación"
+                        Command="{Binding ShowViewCommand}"
+                        CommandParameter="NotificationView" FontSize="12"/>
+                <Button Text="Cerrar sesión"
+                         FontSize="12"
+                        x:Name="btnCerrar"/>
+            </StackLayout>
+
+            <!-- Vistas para los formularios -->
+            <ContentView x:Name="Role1View" Grid.Row="1" Grid.Column="1" IsVisible="True">
+                <StackLayout Padding="10,0,20,0">
+                    <Label Text="Crear Admin"
+                           FontSize="Large"
+                           HorizontalOptions="Start" />
+                    <Entry Placeholder="Nombre" x:Name="txtFirstName" />
+                    <Entry Placeholder="Correo Electrónico"  Keyboard="Email" x:Name="txtEmail"/>
+                    <Entry Placeholder="Password" IsPassword="True"  x:Name="txtPassword"/>
+                    <!-- Picker para seleccionar género -->
+                    <Picker Grid.Column="1" Grid.Row="3" Title="Gender" TextColor="White" BackgroundColor="Transparent" 
+                                    Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="pickerGender">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Masculino</x:String>
+                                <x:String>Femenino</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Button Text="Crear Admin" x:Name="btnCrearAdmin"/>
+                </StackLayout>
+            </ContentView>
+            
+            
+            
+
+            <ContentView x:Name="Role2View" Grid.Row="1" Grid.Column="1" IsVisible="False">
+                <StackLayout Padding="10,0,20,0">
+                    <Label Text="Crear Tutor"
+                           FontSize="Large"
+                           HorizontalOptions="Start" />
+                    <Entry Placeholder="Nombre" x:Name="txtFirstNameTutor"/>
+                    <Entry Placeholder="Apellido" x:Name="txtLastNameTutor"/>
+                    <Entry Placeholder="Correo Electrónico"  Keyboard="Email" x:Name="txtEmailTutor"/>
+                    <Entry Placeholder="Password" IsPassword="True" x:Name="txtPasswordTutor" />
+
+                    <Picker Title="Gender" TextColor="Black" BackgroundColor="Transparent" 
+                            Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="pickerGenderTutor">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+        
+                    <Entry Placeholder="Teléfono" x:Name="txtTelefonoTutor" />
+                    <Entry Placeholder="Dirección" x:Name="txtDireccionTutor"/>
+                    <Entry Placeholder="Ciudad" x:Name="txtCityTutor"/>
+                    <Label Text="Date of Birth" Grid.Column="0" Grid.Row="4" TextColor="Black" Margin="0,0,0,0" />
+                    <DatePicker TextColor="Black" BackgroundColor="Transparent" 
+                                Margin="10,60,5,0" HorizontalOptions="FillAndExpand" x:Name="datePickerDOB" />
+
+                    <Button Text="Crear Tutor" x:Name="btnCrearTutor"/>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView x:Name="Role3View" Grid.Row="1" Grid.Column="1" IsVisible="False">
+                <StackLayout Padding="10,0,20,0">
+                    <Label Text="Crear Docente"
+                           FontSize="Large"
+                           HorizontalOptions="Start" />
+                    <Entry Placeholder="Nombre" x:Name="txtFirstNameDocente"/>
+                    <Entry Placeholder="Apellido" x:Name="txtLastNameDocente"/>
+                    <Entry Placeholder="Correo Electrónico"  Keyboard="Email" x:Name="txtEmailDocente"/>
+                    <Entry Placeholder="Password" IsPassword="True" x:Name="txtPasswordDocente" />
+
+                    <Picker Title="Gender" TextColor="Black" BackgroundColor="Transparent" 
+                            Margin="5,10,10,0" HorizontalOptions="FillAndExpand" x:Name="pickerGenderDocente">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Entry Placeholder="Teléfono" x:Name="txtTelefonoDocente" />
+                    <Entry Placeholder="Dirección" x:Name="txtDireccionDocente"/>
+                    <Entry Placeholder="Ciudad" x:Name="txtCityDocente"/>
+                    <Label Text="Date of Birth" Grid.Column="0" Grid.Row="4" TextColor="Black" Margin="0,0,0,0" />
+                    <DatePicker TextColor="Black" BackgroundColor="Transparent" 
+                                Margin="10,60,5,0" HorizontalOptions="FillAndExpand" x:Name="datePickerDocente" />
+
+                    <Button Text="Crear Tutor" x:Name="btnCrearDocente"/>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView x:Name="NotificationView" Grid.Row="1" Grid.Column="1" IsVisible="False">
+                <StackLayout Padding="10,0,20,0">
+                    <Label Text="Crear Notificación"
+                           FontSize="Large"
+                           HorizontalOptions="Center" />
+                    <Entry Placeholder="Título" x:Name="Titulo" />
+                    <Editor Placeholder="Mensaje" x:Name="Mensaje" />
+                    <DatePicker x:Name="FechaEnvio" />
+                    <Button Text="Enviar Notificación"  x:Name="btnCrearNotificacion"/>
+                </StackLayout>
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

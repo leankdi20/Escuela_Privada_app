@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base2.Views.AlumnosPage"
+             x:Name="AlumnosPageInstance"  
+             Title="Lista de Alumnos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Lista de Alumnos"
+                   FontSize="Large"
+                   HorizontalOptions="Center" />
+
+            <CollectionView ItemsSource="{Binding Estudiantes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" CornerRadius="10" Margin="10" Padding="10">
+                            <StackLayout>
+                                <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold"/>
+                                <Label Text="{Binding LastName}" FontSize="Small" />
+                                <Button Text="Ver Detalles"
+                                        Clicked="VerDetalles_Clicked"
+                                        CommandParameter="{Binding IdEstudiante}" />        
+
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
